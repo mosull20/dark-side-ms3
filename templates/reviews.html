@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dark Side</title>
+</head>
+<body>
+    {% for review in reviews %}
+        {{ review.category_name }}<br>
+        {{ review.title_name }}<br>
+        {{ review.genre_name }}<br>
+        {{ review.synopsis }}<br>
+        {{ review.user_review }}<br>
+        {{ review.added_by }}<br>
+    {% endfor %}
+</body>
+</html>
