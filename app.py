@@ -18,6 +18,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/get_reviews")
 def get_reviews():
     reviews = mongo.db.reviews.find()
@@ -27,6 +32,11 @@ def get_reviews():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
