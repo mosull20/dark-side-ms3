@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Nosifer&display=swap');
 
-h1 {
+h1, .brand-logo {
     font-family: 'Nosifer', cursive;
 }
 
