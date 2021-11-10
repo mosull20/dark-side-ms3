@@ -4,7 +4,12 @@ h1, .brand-logo {
     font-family: 'Nosifer', cursive;
 }
 
-h4 {
+h1, h2, h4, p {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2, h4 {
     font-family: 'Metal Mania', cursive;
 }
 
@@ -12,4 +17,21 @@ body {
     background: url('../images/white-hands-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #a52612;
+}
+
+.category-box {
+    height: 300px;
+    width: 50%;  
+    border: 2px solid black;
+}
+form {
+    margin-top: 60px;
+}
+.form-row {
+    margin: 40px 20px 40px 20px;
+}
+
+.btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

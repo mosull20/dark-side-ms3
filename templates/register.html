@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="row">
+    <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('register') }}">
+      <h2>Register</h2>
+      <!-- username input field -->
+      <div class="row form-row">
+        <div class="input-field col s12">
+          <input placeholder="Choose a username 5 - 15 characters long" id="first_name" type="text" class="validate">
+          <label for="first_name"><i class="fas fa-user"></i>Username</label>
+        </div>
+      </div>
+      <!-- password input field -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Choose a password 5 - 15 characters long" id="password" type="password" class="validate">
+          <label for="password"><i class="fas fa-lock"></i>Password</label>
+        </div>
+      </div>
+    <!-- register button -->
+      <div class="center-align">
+        <button class="btn waves-effect waves-light red darken-4 center-align" type="submit" name="action">Register
+          <i class="fas fa-sign-in-alt"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+        
+
+{% endblock %}
