@@ -2,7 +2,7 @@
 
 The Dark Side is a review site for all things horror related - books, movies and tv shows. Users can read reviews other horror fans have uploaded and if they wish, they can join in the horror community by creating an account and adding their own reviews. 
 
-View the live website [here](https://).
+View the live website [here](https://the-dark-side.herokuapp.com/).
 
 ## UX
 
