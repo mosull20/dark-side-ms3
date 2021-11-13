@@ -39,3 +39,9 @@ form {
 .flashes h4 {
     line-height: 3;
 }
+
+.category-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}

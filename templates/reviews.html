@@ -1,15 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>All Reviews</h2>
 
+<div class="col s12 m7">
+    <h2 class="header">All Reviews</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img class="category-image" src="../static/images/Book-image.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+   
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% for review in reviews %}
+    {{ review.category_name }}<br>
+    {{ review.title_name }}<br>
+    {{ review.genre_name }}<br>
+    {{ review.synopsis }}<br>
+    {{ review.user_review }}<br>
+    {{ review.added_by }}<br>
+{% endfor %}            
                 
-    {% for review in reviews %}
-        {{ review.category_name }}<br>
-        {{ review.title_name }}<br>
-        {{ review.genre_name }}<br>
-        {{ review.synopsis }}<br>
-        {{ review.user_review }}<br>
-        {{ review.added_by }}<br>
-    {% endfor %}
+
 
 {% endblock %}
