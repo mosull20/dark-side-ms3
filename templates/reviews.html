@@ -3,26 +3,36 @@
 
 <div class="col s12 m7">
     <h2 class="header">All Reviews</h2>
+    {% for review in reviews %}
     <div class="card horizontal">
+      
       <div class="card-image">
+        {% if review.category_name == "Books" %}
         <img class="category-image" src="../static/images/Book-image.jpg">
+        {% elif review.category_name == "movies" %}
+        <img class="category-image" src="../static/images/film-image.jpg">
+        {% else %}
+        <img class="category-image" src="../static/images/tv-image.jpg">
+        {% endif %}
       </div>
       <div class="card-stacked">
         <div class="card-content">
-   
+          <strong>Category:</strong> {{ review.category_name }}<br>
+          <strong>Title:</strong> {{ review.title_name }}<br>
+          {% if review.author_name %}
+          <strong>Author:</strong> {{ review.author_name }}<br>
+          {% endif %}
+          <strong>Genre:</strong> {{ review.genre_name }}<br>
+          <strong>Synopsis:</strong> {{ review.synopsis }}<br>
+          <strong>Review:</strong> {{ review.user_review }}<br>
+          <strong>Added by:</strong> {{ review.added_by }}<br>
         </div>
       </div>
+     
     </div>
-
+    {% endfor %}
   </div>
-{% for review in reviews %}
-    {{ review.category_name }}<br>
-    {{ review.title_name }}<br>
-    {{ review.genre_name }}<br>
-    {{ review.synopsis }}<br>
-    {{ review.user_review }}<br>
-    {{ review.added_by }}<br>
-{% endfor %}            
+           
                 
 
 
