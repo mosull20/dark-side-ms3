@@ -4,42 +4,43 @@
 
 
 <div class="row">
-    <form class="col s12 m8 offset-m2 grey lighten-4">
+    <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="">
         <h2 class="header">Add Review</h2>
         <div class="row">
-
+            <!-- select category field -->
             <div class="input-field col s12">
-                <select>
-                  <option value="" disabled selected>Choose category</option>
-                  <option value="1">Book</option>
-                  <option value="2">Movie</option>
-                  <option value="3">TV Show</option>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+
                 </select>
-                <label>Select Category (Book, Movie, TV Show)</label>
+                <label for="category_name">Select Category (Book, Movie, TV Show)</label>
               </div>
-
+            <!-- input Title name -->
             <div class="input-field col s12">
-                <input id="title" type="text" class="validate">
-                <label for="title">Title</label>
+                <input id="title_name" name="title_name" minlength="2" maxlength="50" type="text" class="validate" required>
+                <label for="title-name">Title</label>
             </div>
-
+            <!-- input Author name if book selected -->
             <div class="input-field col s12">
-                <input id="title" type="text" class="validate">
-                <label for="title">Author</label>
+                <input id="author_name" name="author_name" minlength="2" maxlength="50" type="text" class="validate" required>
+                <label for="author_name">Author</label>
             </div>
-
+            <!-- input synopsis -->
             <div class="input-field col s12">
-                <textarea id="synopsis_text" class="materialize-textarea" data-length="120"></textarea>
-                <label for="synopsis_text">Synopsis</label>
+                <textarea id="synopsis" name="synopsis" class="materialize-textarea validate" data-length="120" required></textarea>
+                <label for="synopsis">Synopsis</label>
             </div>
-
+            <!-- input review -->
             <div class="input-field col s12">
-                <textarea id="review_text" class="materialize-textarea" data-length="200"></textarea>
-                <label for="review_text">Review</label>
+                <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required></textarea>
+                <label for="user_review">Review</label>
             </div>
-
+            <!-- input added by field -->
             <div class="input-field col s12">
-                <input id="added_by" type="text" class="validate">
+                <input id="added_by" name="added_by" minlength="2" maxlength="50" type="text" class="validate" required>
                 <label for="added_by">Added by</label>
             </div>
                     
