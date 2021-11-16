@@ -25,7 +25,7 @@ def home():
 
 @app.route("/get_reviews")
 def get_reviews():
-    reviews = mongo.db.reviews.find()
+    reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -83,9 +83,11 @@ def profile(username):
     # get session user's name from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
+    reviews = list(mongo.db.reviews.find(
+        {"added_by": session["user"]}
+    ))
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, reviews=reviews)
 
     return redirect(url_for("login"))
 

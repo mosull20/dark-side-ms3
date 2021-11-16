@@ -4,10 +4,47 @@
 
 <div class="row">
   <div class="col s12 m8 offset-m2 grey lighten-4">
-      <h2>{{ username }}'s Profile</h2>
-   
+    <h2>{{ username }}'s Profile</h2>
+
   </div>
 </div>
+
+{% if reviews|length > 0 %}
+
+<div class="col s12 m7">
+  <h2 class="header">My Reviews</h2>
+  {% for review in reviews if session.user|lower == review.added_by|lower %}
+  <div class="card horizontal">
+
+    <div class="card-image">
+      {% if review.category_name == "Book" %}
+      <img class="category-image" src="../static/images/Book-image.jpg">
+      {% elif review.category_name == "Movie" %}
+      <img class="category-image" src="../static/images/film-image.jpg">
+      {% else %}
+      <img class="category-image" src="../static/images/tv-image.jpg">
+      {% endif %}
+    </div>
+
+    <div class="card-stacked">
+      <div class="card-content">
+        <strong>Category:</strong> {{ review.category_name }}<br>
+        <strong>Title:</strong> {{ review.title_name }}<br>
+        {% if review.author_name %}
+        <strong>Author:</strong> {{ review.author_name }}<br>
+        {% endif %}
+        <strong>Genre:</strong> {{ review.genre_name }}<br>
+        <strong>Synopsis:</strong> {{ review.synopsis }}<br>
+        <strong>Review:</strong> {{ review.user_review }}<br>
+        <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endif %}
 
 
 {% endblock %}
