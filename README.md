@@ -51,6 +51,8 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 ## Credits
 ### Content
 ### Code
+
+Jquery code to resolve issue with no validation on Materialize select element taken directly from Code Institute course work, 'Materialize Form Validation' from the Mini Project video content
 ### Media
 #### Images
 ### Acknowledgements
