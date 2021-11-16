@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+    <form class="col s12 m8 offset-m2 grey lighten-4">
+        <h2 class="header">Add Review</h2>
+        <div class="row">
+
+            <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Choose category</option>
+                  <option value="1">Book</option>
+                  <option value="2">Movie</option>
+                  <option value="3">TV Show</option>
+                </select>
+                <label>Select Category (Book, Movie, TV Show)</label>
+              </div>
+
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="title" type="text" class="validate">
+                <label for="title">Author</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="synopsis_text" class="materialize-textarea" data-length="120"></textarea>
+                <label for="synopsis_text">Synopsis</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="review_text" class="materialize-textarea" data-length="200"></textarea>
+                <label for="review_text">Review</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="added_by" type="text" class="validate">
+                <label for="added_by">Added by</label>
+            </div>
+                    
+        </div>
+    </form>
+  </div>
+
+{% endblock %}
