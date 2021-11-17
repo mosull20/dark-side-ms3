@@ -3,33 +3,55 @@
 
 <div class="col s12 m7">
     <h2 class="header">All Reviews</h2>
-    {% for review in reviews %}
-    <div class="card horizontal">
-      
-      <div class="card-image">
-        {% if review.category_name == "Book" %}
-        <img class="category-image" src="../static/images/Book-image.jpg">
-        {% elif review.category_name == "Movie" %}
-        <img class="category-image" src="../static/images/film-image.jpg">
-        {% else %}
-        <img class="category-image" src="../static/images/tv-image.jpg">
-        {% endif %}
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <strong>Category:</strong> {{ review.category_name }}<br>
-          <strong>Title:</strong> {{ review.title_name }}<br>
-          {% if review.author_name %}
-          <strong>Author:</strong> {{ review.author_name }}<br>
-          {% endif %}
-          <strong>Genre:</strong> {{ review.genre_name }}<br>
-          <strong>Synopsis:</strong> {{ review.synopsis }}<br>
-          <strong>Review:</strong> {{ review.user_review }}<br>
-          <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
+
+    <div class="row">
+      <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('search') }}">
+          <div class="row valign-wrapper center-align">
+              <div class="col s12 m8 input-field">
+                  <i class="fas fa-search prefix"></i>
+                  <input type="text" name="query" id="query" minlength="1" class="validate" required>
+                  <label for="query">Search by Title</label>
+              </div>
+              <div class="col s12 m4">
+                <a href="{{ url_for('get_reviews') }}" class="btn waves-effect waves-light red darken-4 center-align search-button">Reset</a>
+                <button type="submit" class="btn waves-effect waves-light red darken-4 center-align search-button">
+                  <i class="fas fa-search"> Search</i>
+                </button>
+              </div>
         </div>
-      </div>
-     
+      </form>
     </div>
+
+    {% if reviews|length == 0 %}
+      <h4>No results found</h4>
+    {% endif %}
+
+    {% for review in reviews %}
+      <div class="card horizontal"> 
+        <div class="card-image">
+          {% if review.category_name == "Book" %}
+          <img class="category-image" src="../static/images/Book-image.jpg">
+          {% elif review.category_name == "Movie" %}
+          <img class="category-image" src="../static/images/film-image.jpg">
+          {% else %}
+          <img class="category-image" src="../static/images/tv-image.jpg">
+          {% endif %}
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <strong>Category:</strong> {{ review.category_name }}<br>
+            <strong>Title:</strong> {{ review.title_name }}<br>
+            {% if review.author_name %}
+            <strong>Author:</strong> {{ review.author_name }}<br>
+            {% endif %}
+            <strong>Genre:</strong> {{ review.genre_name }}<br>
+            <strong>Synopsis:</strong> {{ review.synopsis }}<br>
+            <strong>Review:</strong> {{ review.user_review }}<br>
+            <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
+          </div>
+        </div>
+      
+      </div>
     {% endfor %}
   </div>
            

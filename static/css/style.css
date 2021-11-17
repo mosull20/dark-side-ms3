@@ -49,3 +49,7 @@ form {
 .btn-small {
     margin-bottom: 20px;
 }
+
+.search-button {
+    font-size: 18px;
+}
