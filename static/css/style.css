@@ -45,3 +45,7 @@ form {
     height: 200px;
     margin: 20px;
 }
+
+.btn-small {
+    margin-bottom: 20px;
+}
