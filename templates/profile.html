@@ -39,7 +39,7 @@
         <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
       </div>
       <div class="center-align">
-        <a href="" class="btn-small waves-effect waves-light red darken-4 center-align">Edit
+        <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small waves-effect waves-light red darken-4 center-align">Edit
           <i class="fas fa-pen"></i>
         </a>
       </div>
