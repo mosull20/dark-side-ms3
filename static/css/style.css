@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Nosifer&display=swap');
 
-h1, .brand-logo {
-    font-family: 'Nosifer', cursive;
-}
-
-h1, h2, h4, p {
-    text-align: center;
-    margin-top: 50px;
-}
-
-h2, h4 {
-    font-family: 'Metal Mania', cursive;
-}
-
+/* body styling incl materialize css for sticky footer */
 body {
     background: url('../images/white-hands-bg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -22,47 +10,40 @@ body {
     flex-direction: column;
 }
 
+/* materialize css for sticky footer */
 main {
     flex: 1 0 auto;
   }
-.category-box {
-    height: 300px;
-    width: 50%;  
-    border: 2px solid black;
-}
-form {
-    margin-top: 60px;
-}
-.form-row {
-    margin: 40px 20px 40px 20px;
+
+/* headers */
+h1, .brand-logo {
+    font-family: 'Nosifer', cursive;  
 }
 
-.btn {
-    margin-top: 50px;
-    margin-bottom: 50px;
+h1 {
+    text-shadow: 2px 2px whitesmoke;
 }
 
-.flashes h4 {
-    line-height: 3;
+h1, h2, h4, p {
+    text-align: center;
+    margin-top: 50px;  
 }
 
-.category-image {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+h2, h4 {
+    font-family: 'Metal Mania', cursive;
+    text-shadow: 2px 2px whitesmoke;
 }
 
-.btn-small {
-    margin-bottom: 20px;
+/* nav bar styling */
+.nav-wrapper {
+    background-color: #2f3437;
 }
 
-.search-button {
-    font-size: 18px;
-}
-
+/* footer */
 footer {
     margin-top: 20px;
     height: 70px;
+    background-color: #2f3437;
 }
 
 .footer-div {
@@ -78,5 +59,49 @@ footer {
 .footer-text a {
     color: whitesmoke;
     margin: 5px;
-
 }
+
+/* forms */
+form {
+    margin-top: 60px;
+}
+
+.form-row {
+    margin: 40px 20px 40px 20px;
+}
+
+/* buttons */
+.btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-small {
+    margin-bottom: 20px;
+}
+
+.search-button {
+    font-size: 18px;
+}
+
+/* flash messages */
+.flashes h4 {
+    line-height: 3;
+}
+
+/* home page */
+.category-box {
+    height: 300px;
+    width: 50%;  
+    border: 2px solid black;
+}
+
+/* reviews page */
+.category-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+
+
