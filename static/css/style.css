@@ -109,11 +109,12 @@ form {
     width: 50%;  
     /* border: 2px solid black; */
     margin: 20px;
-    box-shadow: 0px 2px 10px 2px #a52612;
+    box-shadow: 0px 2px 10px 2px #b8b8b8;
 }
 
-.category-box h4 {
+.category-box h4 a {
     font-size: 70px;
+    color: #a52612;
 }
 
 /* reviews page */
