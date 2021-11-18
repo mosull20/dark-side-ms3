@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="row">
+  <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('contact') }}">
+    <h2>Contact Us</h2>
+    <!-- Name input field -->
+    <div class="row form-row">
+      <div class="input-field col s12">
+        <input placeholder="Your Name" name="name" id="name" type="text" 
+          minlength="3" maxlength="25" class="validate" required>
+        <label for="name"><i class="fas fa-user"></i>Your Name</label>
+      </div>
+    </div>
+    <!-- Email address input field -->
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="We will never share your email address with anyone else" id="email" name="email" type="email" 
+          minlength="5" maxlength="30" class="validate" required>
+        <label for="email"><i class="fas fa-envelope"></i>Your Email address</label>
+      </div>
+    </div>
+
+    <!-- message input field -->
+    <div class="input-field col s12">
+        <textarea id="message" name="message" class="materialize-textarea validate" placeholder="Your Message" required></textarea>
+        <label for="message"><i class="fas fa-pencil-alt"></i>Your message</label>
+    </div>
+
+    <!-- submit button -->
+    <div class="center-align">
+      <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Send
+        <i class="fas fa-sign-in-alt"></i>
+      </button>
+    </div>
+
+  </form>
+</div>
+
+
+{% endblock %}

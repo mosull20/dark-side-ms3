@@ -153,6 +153,13 @@ def delete_review(review_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        flash("Thank you, your message has been successfully sent.")
+    return render_template("contact.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
