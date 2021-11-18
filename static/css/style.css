@@ -118,9 +118,7 @@ form {
 
 /* reviews page */
 .category-image {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    height: auto;
 }
 
 .review-heading {
