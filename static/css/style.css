@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Metal+Mania&family=Nosifer&family=Piedra&family=Roboto+Slab:wght@400;700&display=swap');
 
 /* body styling incl materialize css for sticky footer */
 body {
@@ -8,6 +8,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Roboto Slab', serif;
 }
 
 /* materialize css for sticky footer */
@@ -21,7 +22,9 @@ h1, .brand-logo {
 }
 
 h1 {
-    text-shadow: 2px 2px whitesmoke;
+    text-shadow: 2px 2px 10px whitesmoke;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 80px;
 }
 
 h1, h2, h4, p {
@@ -29,14 +32,19 @@ h1, h2, h4, p {
     margin-top: 50px;  
 }
 
-h2, h4 {
-    font-family: 'Metal Mania', cursive;
-    text-shadow: 2px 2px whitesmoke;
+h2, h3, h4 {
+    font-family: 'Jolly Lodger', cursive;
+    text-shadow: 2px 2px 10px whitesmoke;
 }
 
 /* nav bar styling */
 .nav-wrapper {
     background-color: #2f3437;
+}
+
+nav li a {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 30px;
 }
 
 /* footer */
@@ -53,8 +61,8 @@ footer {
 .footer-text {
     margin-top: 10px;
     color: whitesmoke;
-    font-size: 18px;
-    font-family: 'Nosifer', cursive;
+    font-size: 30px;
+    font-family: 'Jolly Lodger', cursive;
 }
 .footer-text a {
     color: whitesmoke;
@@ -90,11 +98,22 @@ form {
 }
 
 /* home page */
+.intro-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2f3437;
+}
+
 .category-box {
     height: 250px;
     width: 50%;  
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 20px;
+    box-shadow: 0px 2px 10px 2px #a52612;
+}
+
+.category-box h4 {
+    font-size: 70px;
 }
 
 /* reviews page */
@@ -102,6 +121,16 @@ form {
     width: 200px;
     height: 200px;
     margin: 20px;
+}
+
+.review-heading {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.review-content {
+    color: #2f3437;
 }
 
 

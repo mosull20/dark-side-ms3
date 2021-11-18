@@ -27,7 +27,7 @@
     {% endif %}
 
     {% for review in reviews %}
-      <div class="card horizontal"> 
+      <div class="card horizontal hoverable"> 
         <div class="card-image">
           {% if review.category_name == "Book" %}
           <img class="category-image" src="../static/images/Book-image.jpg">
@@ -39,15 +39,15 @@
         </div>
         <div class="card-stacked">
           <div class="card-content">
-            <strong>Category:</strong> {{ review.category_name }}<br>
-            <strong>Title:</strong> {{ review.title_name }}<br>
+            <span class="review-heading">Category:</span><span class="review-content">{{ review.category_name }}</span><br>
+            <span class="review-heading">Title:</span><span class="review-content">{{ review.title_name }}</span> <br>
             {% if review.author_name %}
-            <strong>Author:</strong> {{ review.author_name }}<br>
+            <span class="review-heading">Author:</span> <span class="review-content">{{ review.author_name }}</span><br>
             {% endif %}
-            <strong>Genre:</strong> {{ review.genre_name }}<br>
-            <strong>Synopsis:</strong> {{ review.synopsis }}<br>
-            <strong>Review:</strong> {{ review.user_review }}<br>
-            <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
+            <span class="review-heading">Genre:</span> <span class="review-content">{{ review.genre_name }}</span><br>
+            <span class="review-heading">Synopsis:</span> <span class="review-content">{{ review.synopsis }}</span><br>
+            <span class="review-heading">Review:</span> <span class="review-content">{{ review.user_review }}</span><br>
+            <span class="review-heading"><em>Added by:</em></span> <span class="review-content">{{ review.added_by }}</span><br>
           </div>
         </div>
       
