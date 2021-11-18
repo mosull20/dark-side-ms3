@@ -17,8 +17,14 @@ body {
     background: url('../images/white-hands-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #a52612;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+main {
+    flex: 1 0 auto;
+  }
 .category-box {
     height: 300px;
     width: 50%;  
@@ -52,4 +58,25 @@ form {
 
 .search-button {
     font-size: 18px;
+}
+
+footer {
+    margin-top: 20px;
+    height: 70px;
+}
+
+.footer-div {
+    height: 70px;
+}
+
+.footer-text {
+    margin-top: 10px;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Nosifer', cursive;
+}
+.footer-text a {
+    color: whitesmoke;
+    margin: 5px;
+
 }
