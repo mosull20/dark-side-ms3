@@ -118,8 +118,18 @@ form {
 }
 
 /* reviews page */
+/* .card .card-image {
+    max-height: 300px;
+} */
+.card {
+    height: 450px;
+}
+.card-image {
+    height: 70%
+}
 .category-image {
-    height: auto;
+    height: 100%;
+    width: auto;
 }
 
 .review-heading {
@@ -132,5 +142,8 @@ form {
     color: #2f3437;
 }
 
+/* #author-col {
+    display: none;
+} */
 
 

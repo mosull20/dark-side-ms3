@@ -29,8 +29,8 @@
             </div>
             <!-- input Author name if book selected -->
 
-                    <div class="input-field col s12">
-                        <input id="author_name" name="author_name" minlength="2" maxlength="50" value="{{ review.author_name }}" type="text" class="validate" required>
+                    <div id="author-col" class="input-field col s12">
+                        <input id="author_name" name="author_name" minlength="2" maxlength="50" value="{{ review.author_name }}" type="text" class="validate">
                         <label for="author_name">Author</label>
                     </div>
 
@@ -44,6 +44,11 @@
                 <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required>{{ review.user_review }}</textarea>
                 <label for="user_review">Review</label>
             </div>
+                   <!-- input image url as an option for the user - not required -->    
+                   <div class="input-field col s12">
+                    <input id="image_url" name="image_url" minlength="2" maxlength="150" type="url" class="validate">
+                    <label for="image_url">Link to image (optional)</label>
+                </div>
                     
         </div>
             <!-- submit/edit button -->

@@ -116,6 +116,7 @@ def add_review():
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
             "user_review": request.form.get("user_review"),
+            "image_url": request.form.get("image_url"),
             "added_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
@@ -135,6 +136,7 @@ def edit_review(review_id):
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
             "user_review": request.form.get("user_review"),
+            "image_url": request.form.get("image_url"),
             "added_by": session["user"]
             }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, updated_review)
