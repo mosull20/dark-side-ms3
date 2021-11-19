@@ -35,6 +35,20 @@
   };
 });
 
+// code to hide author column on add review page found on stack overflow https://stackoverflow.com/questions/15566999/how-to-show-form-input-fields-based-on-select-value
+// code to remove required attribute from author name when hidden found on stack overflow https://stackoverflow.com/questions/13951336/removing-html5-required-attribute-with-jquery
+$('#category_name').on('change', function(){
+    if ($(this).val() === "Book"){
+        $("#author-col").show()
+        $("#author_name").prop('required', true)
+        } 
+    else {
+        $("#author-col").hide()
+    }
+    }
+);
+
+
 
 
        
