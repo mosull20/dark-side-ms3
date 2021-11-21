@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Metal+Mania&family=Nosifer&family=Piedra&family=Roboto+Slab:wght@400;700&display=swap');
 
-/* body styling incl materialize css for sticky footer */
+/* --- body styling incl materialize css for sticky footer --- */
 body {
     background: url('../images/white-hands-bg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -11,12 +11,12 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
-/* materialize css for sticky footer */
+/* --- materialize css for sticky footer ---  */
 main {
     flex: 1 0 auto;
   }
 
-/* headers */
+/* --- headers --- */
 h1, .brand-logo {
     font-family: 'Nosifer', cursive;  
 }
@@ -37,7 +37,7 @@ h2, h3, h4 {
     text-shadow: 2px 2px 10px whitesmoke;
 }
 
-/* nav bar styling */
+/* --- nav bar styling --- */
 .nav-wrapper {
     background-color: #2f3437;
 }
@@ -47,7 +47,7 @@ nav li a {
     font-size: 30px;
 }
 
-/* footer */
+/* --- footer --- */
 footer {
     margin-top: 20px;
     height: 70px;
@@ -61,15 +61,19 @@ footer {
 .footer-text {
     margin-top: 10px;
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Jolly Lodger', cursive;
 }
 .footer-text a {
     color: whitesmoke;
     margin: 5px;
+    
+}
+.social-links {
+    font-size: 18px;
 }
 
-/* forms */
+/* --- forms --- */
 form {
     margin-top: 60px;
 }
@@ -78,7 +82,7 @@ form {
     margin: 40px 20px 40px 20px;
 }
 
-/* buttons */
+/* --- buttons --- */
 .btn {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -92,12 +96,12 @@ form {
     font-size: 18px;
 }
 
-/* flash messages */
+/* --- flash messages --- */
 .flashes h4 {
     line-height: 3;
 }
 
-/* home page */
+/* --- home page --- */
 .intro-text {
     font-size: 20px;
     font-weight: 700;
@@ -107,7 +111,6 @@ form {
 .category-box {
     height: 250px;
     width: 50%;  
-    /* border: 2px solid black; */
     margin: 20px;
     box-shadow: 0px 2px 10px 2px #b8b8b8;
 }
@@ -117,10 +120,8 @@ form {
     color: #a52612;
 }
 
-/* reviews page */
-/* .card .card-image {
-    max-height: 300px;
-} */
+/* --- reviews page --- */
+
 .card {
     height: 450px;
 }
@@ -142,8 +143,37 @@ form {
     color: #2f3437;
 }
 
-/* #author-col {
-    display: none;
-} */
+/* --- media queries --- */
+
+/* Screens under 575px */
+@media screen and (max-width: 575px) {
+    nav .brand-logo {
+        font-size: 1.1rem;
+    }
+    footer {
+        height: auto;
+    }
+    .footer-text {
+        font-size: 20px;
+    }
+}
+
+/* Screens under 767px */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    nav .brand-logo {
+        font-size: 1.8rem;
+    }
+    footer {
+        height: auto;
+    }
+    .footer-text {
+        font-size: 20px;
+    }
+    .social-links {
+        font-size: 16px;
+    }
+}
+/* Screens above 768px */
+
 
 
