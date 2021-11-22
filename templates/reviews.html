@@ -50,16 +50,16 @@
         </div>
     
           <div class="card-content">
-            <span class="review-heading card-title activator">{{ review.category_name }}<i class="fas fa-arrow-circle-up right"></i></span>
+            <span class="category-heading card-title activator">{{ review.category_name }}<i class="fas fa-arrow-circle-up right"></i></span>
             <span class="review-heading">Title:</span><span class="review-content">{{ review.title_name }}</span> <br>
             {% if review.author_name %}
               <span class="review-heading">Author:</span> <span class="review-content">{{ review.author_name }}</span><br>
             {% endif %}
           </div>
             <div class="card-reveal">
-              <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
-              <span class="review-heading">Review:</span> <span class="review-content">{{ review.user_review }}</span><br>
-              <span class="review-heading"><em>Added by:</em></span> <span class="review-content">{{ review.added_by }}</span><br>
+              <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down right"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
+              <span class="review-heading">Review:</span><br><span class="review-content">{{ review.user_review }}</span><br>
+              <span class="review-heading"><br><em>Added by:</em></span><span class="review-content">{{ review.added_by }}</span><br>
             </div>    
       </div> 
   </div>

@@ -125,7 +125,7 @@ form {
 /* --- reviews page --- */
 
 .card {
-    height: 450px;
+    height: 500px;
 }
 .card-image {
     height: 70%
@@ -137,7 +137,7 @@ form {
 
 .review-heading {
     font-family: 'Jolly Lodger', cursive;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 10px;
 }
 
