@@ -23,6 +23,24 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/book_reviews")
+def book_reviews():
+    reviews = list(mongo.db.reviews.find())
+    return render_template("book_reviews.html", reviews=reviews)
+
+
+@app.route("/movie_reviews")
+def movie_reviews():
+    reviews = list(mongo.db.reviews.find())
+    return render_template("movie_reviews.html", reviews=reviews)
+
+
+@app.route("/tvshow_reviews")
+def tvshow_reviews():
+    reviews = list(mongo.db.reviews.find())
+    return render_template("tvshow_reviews.html", reviews=reviews)
+
+
 @app.route("/get_reviews")
 def get_reviews():
     reviews = list(mongo.db.reviews.find())
