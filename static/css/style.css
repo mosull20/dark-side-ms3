@@ -46,6 +46,9 @@ nav li a {
     font-family: 'Jolly Lodger', cursive;
     font-size: 30px;
 }
+.dropdown-items li>a {
+    font-size: 20px;
+}
 
 /* --- footer --- */
 footer {
@@ -184,7 +187,6 @@ form {
         font-size: 16px;
     }
 }
-/* Screens above 768px */
-
+/* Screens above 978px */
 
 

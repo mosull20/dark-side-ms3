@@ -16,13 +16,28 @@
 <body>
     <header>
       <!-- main nav bar -->
+      <!-- dropdown menu for main nav bar -->
+        <ul id="dropdown1" class="dropdown-content dropdown-items">
+            <li><a class="black-text" href="{{ url_for('book_reviews') }}">Books</a></li>
+            <li><a class="black-text" href="{{ url_for('movie_reviews') }}">Movies</a></li>
+            <li><a class="black-text" href="{{ url_for('tvshow_reviews') }}">TV Shows</a></li>
+            <li><a class="black-text" href="{{ url_for('get_reviews') }}">All reviews</a></li>
+        </ul>
+        <!-- dropdown menu for collapsible side navbar -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{{ url_for('book_reviews') }}">Books</a></li>
+            <li><a href="{{ url_for('movie_reviews') }}">Movies</a></li>
+            <li><a href="{{ url_for('tvshow_reviews') }}">TV Shows</a></li>
+            <li><a href="{{ url_for('get_reviews') }}">All reviews</a></li>
+        </ul>
         <nav>
             <div class="nav-wrapper">
               <a href="{{ url_for('home') }}" class="brand-logo">The Dark Side</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
+    
+                <li><a class="dropdown-trigger" href="{{ url_for('get_reviews') }}" data-target="dropdown1">Reviews <i class="fas fa-sort-down"></i></a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                     <li><a href="{{ url_for('add_review') }}">Add Review</a></li>
@@ -38,7 +53,7 @@
         <!-- collapsible side navbar -->
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
+                <li><a class="dropdown-trigger" href="{{ url_for('get_reviews') }}" data-target="dropdown2">Reviews <i class="fas fa-sort-down right"></i></a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                     <li><a href="{{ url_for('add_review') }}">Add Review</a></li>
