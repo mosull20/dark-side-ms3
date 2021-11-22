@@ -40,14 +40,15 @@
         </div>
     
           <div class="card-content">
-            <span class="review-heading card-title activator">{{ review.category_name }}<i class="fas fa-arrow-circle-up right"></i></span>
+            <span class="category-heading card-title activator">{{ review.category_name }}<i class="fas fa-arrow-circle-up right"></i></span>
             <span class="review-heading">Title:</span><span class="review-content">{{ review.title_name }}</span> <br>
             {% if review.author_name %}
               <span class="review-heading">Author:</span> <span class="review-content">{{ review.author_name }}</span><br>
             {% endif %}
           </div>
             <div class="card-reveal">
-              <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
+              
+              <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down right"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
               <span class="review-heading">Review:</span> <span class="review-content">{{ review.user_review }}</span><br>
               <span class="review-heading"><em>Added by:</em></span> <span class="review-content">{{ review.added_by }}</span><br>
             </div>    
@@ -58,9 +59,26 @@
               <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small waves-effect waves-light red darken-4 center-align">Edit
                 <i class="fas fa-pen"></i>
               </a>
-              <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn-small waves-effect waves-light red darken-4 center-align">Delete
+
+               <!-- Modal Trigger -->
+               <a href="#{{ review._id }}" class="btn-small waves-effect waves-light red darken-4 center-align modal-trigger">Delete
                 <i class="fas fa-trash-alt"></i>
               </a>
+               <!-- Modal Structure -->
+               <div id="{{ review._id }}" class="modal">
+                <div class="modal-content">
+                  <h4>Delete this Review?</h4>
+                  <p>Are you sure you want to delete this review? This cannot be undone!</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                  <a href="{{ url_for('delete_review', review_id=review._id) }}" class="modal-close btn-small waves-effect waves-light red darken-4 center-align ">Delete
+                    <i class="fas fa-trash-alt"></i>
+                  </a>
+                </div>
+              </div>
+                                                
+         
             </div>
           </div>
 

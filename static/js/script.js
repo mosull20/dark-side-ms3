@@ -4,6 +4,7 @@
     $('select').formSelect();
     $('textarea#synopsis, textarea#user_review').characterCounter();
     $(".dropdown-trigger").dropdown();
+    $('.modal').modal();
  
 
   // code below to fix validation issue with materialize select element taken from Code Institute Mini project 

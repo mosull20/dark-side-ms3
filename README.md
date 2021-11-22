@@ -54,6 +54,7 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 
 * Jquery code to resolve issue with no validation on Materialize select element taken directly from Code Institute course work, 'Materialize Form Validation' from the Mini Project video content
 * In using the dropdown menu feature in the navbar from materialize, I found it would only target either the main navbar or the collapsible sidenav and not both at the same time. Found an assist to a solution [here](https://pretagteam.com/question/materialize-navbar-dropdownsidebar-dropdown-wont-work-together) which suggested using two copies of the same ul, one to target main navbar, one to target collapsible side navbar. 
+* Having issues using Materialize modal for confirming with user before deleting a review, issue was with targeting the correct review, solution to use the jinja templating value of the review id in the href and id found on slack (project-milestone-3 channel)
 
 ### Media
 #### Images
