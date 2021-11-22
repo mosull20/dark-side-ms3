@@ -75,7 +75,7 @@ footer {
 
 /* --- forms --- */
 form {
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .form-row {
@@ -94,6 +94,8 @@ form {
 
 .search-button {
     font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 /* --- flash messages --- */
@@ -141,6 +143,10 @@ form {
 
 .review-content {
     color: #2f3437;
+}
+
+.search-row {
+    margin-bottom: 5px;
 }
 
 
