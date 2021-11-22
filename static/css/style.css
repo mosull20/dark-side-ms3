@@ -149,6 +149,10 @@ form {
     margin-bottom: 5px;
 }
 
+/* --- profile page --- */
+.profile-header {
+    margin-top: 0px;
+}
 
 /* --- media queries --- */
 
