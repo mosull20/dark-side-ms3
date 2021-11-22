@@ -54,6 +54,12 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/sort_reviews")
+def sort_reviews():
+    reviews = list(mongo.db.reviews.find().sort("title_name", 1))
+    return render_template("sort_reviews.html", reviews=reviews)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

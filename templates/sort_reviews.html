@@ -3,7 +3,7 @@
 
 <div class="col s12 m7">
     <h2 class="header">All Reviews</h2>
-<!-- search by title box -->
+
     <div class="row">
       <form class="col s12" method="POST" action="{{ url_for('search') }}">
           <div class="row valign-wrapper center-align search-row">
@@ -20,35 +20,18 @@
                     <i class="fas fa-search"></i> Search
                   </button>
                 </div>
-            </div>      
+            </div>
+        
       </form>
     </div>
     </div>
-<!-- if no results found in search, display the following -->
+
     {% if reviews|length == 0 %}
       <h4>No results found</h4>
     {% endif %}
 
-
-<!-- 'sort by' section -->
-    <div class="row">
-      <div class="col s12 m4 right"> 
-        <span class="sort-dropdown">Sort By:</span>
-        <a class='dropdown-trigger sort-dropdown' href='#' data-target='dropdown3'><i class="fas fa-sort-down"></i></a>
-
-        <!-- Dropdown Structure -->
-        <ul id='dropdown3' class='dropdown-content'>
-          <li><a class="black-text" href="{{ url_for('sort_reviews') }}">Title A-Z</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-
-<!-- reviews display cards - from Materialize -->
     <div class="row">
     {% for review in reviews %}
-
       <div class="col s12 m6 l4">
       <div class="card hoverable"> 
         <div class="card-image">
@@ -79,6 +62,7 @@
             </div>    
       </div> 
   </div>
+ 
 
 {% endfor %}
 </div>     

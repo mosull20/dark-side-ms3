@@ -152,6 +152,12 @@ form {
     margin-bottom: 5px;
 }
 
+.sort-dropdown {
+    color: #a52612;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
 /* --- profile page --- */
 .profile-header {
     margin-top: 0px;
