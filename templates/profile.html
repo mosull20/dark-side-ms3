@@ -3,7 +3,7 @@
 
 
 <div class="row">
-  <div class="col s12 m8 offset-m2 grey lighten-4">
+  <div class="col s12 m8 offset-m2">
     <h2>{{ username }}'s Profile</h2>
   </div>
 </div>
@@ -12,30 +12,46 @@
 
   <div class="col s12 m7">
     <h2 class="header">My Reviews</h2>
+    <div class="row center-align">
+      <a href="{{ url_for('add_review') }}" class="btn-large waves-effect waves-light red darken-4 center-align">Add New Review
+          <i class="fas fa-pen"></i>
+      </a>
+    </div>
+  </div>
+
+<div class="row">
     {% for review in reviews if session.user|lower == review.added_by|lower %}
-      <div class="card horizontal">
+
+    <div class="col s12 m6 l4">
+      <div class="card hoverable"> 
         <div class="card-image">
-            {% if review.category_name == "Book" %}
-                <img class="category-image" src="../static/images/Book-image.jpg">
-            {% elif review.category_name == "Movie" %}
-                <img class="category-image" src="../static/images/film-image.jpg">
-            {% else %}
-                <img class="category-image" src="../static/images/tv-image.jpg">
+          {% if review.image_url %}
+          <img class="activator category-image" src="{{ review.image_url }}" alt="{{ review.title_name }} image">
+          {% else %}
+              {% if review.category_name == "Book" %}
+                <img class="activator category-image" src="../static/images/Book-image.jpg">
+              {% elif review.category_name == "Movie" %}
+                <img class="activator category-image" src="../static/images/film-image.jpg">
+              {% else %}
+                <img class="activator category-image" src="../static/images/tv-image.jpg">
+              {% endif %}
+          {% endif %}
+        </div>
+    
+          <div class="card-content">
+            <span class="review-heading card-title activator">{{ review.category_name }}<i class="fas fa-arrow-circle-up right"></i></span>
+            <span class="review-heading">Title:</span><span class="review-content">{{ review.title_name }}</span> <br>
+            {% if review.author_name %}
+              <span class="review-heading">Author:</span> <span class="review-content">{{ review.author_name }}</span><br>
             {% endif %}
           </div>
-
-          <div class="card-stacked">
-            <div class="card-content">
-              <strong>Category:</strong> {{ review.category_name }}<br>
-              <strong>Title:</strong> {{ review.title_name }}<br>
-              {% if review.author_name %}
-                <strong>Author:</strong> {{ review.author_name }}<br>
-              {% endif %}
-              <strong>Genre:</strong> {{ review.genre_name }}<br>
-              <strong>Synopsis:</strong> {{ review.synopsis }}<br>
-              <strong>Review:</strong> {{ review.user_review }}<br>
-              <strong><em>Added by:</em></strong> {{ review.added_by }}<br>
-            </div>
+            <div class="card-reveal">
+              <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
+              <span class="review-heading">Review:</span> <span class="review-content">{{ review.user_review }}</span><br>
+              <span class="review-heading"><em>Added by:</em></span> <span class="review-content">{{ review.added_by }}</span><br>
+            </div>    
+      </div> 
+  
 
             <div class="center-align">
               <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small waves-effect waves-light red darken-4 center-align">Edit
@@ -47,9 +63,9 @@
             </div>
           </div>
 
-        </div>
     {% endfor %}
   </div>
+
 
   {% else %}
     <div class="row">
@@ -60,10 +76,6 @@
 
   {% endif %}
 
-  <div class="row center-align">
-    <a href="{{ url_for('add_review') }}" class="btn-large waves-effect waves-light red darken-4 center-align">Add New Review
-        <i class="fas fa-pen"></i>
-    </a>
-</div>
+
 
 {% endblock %}
