@@ -44,7 +44,14 @@
                 <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required>{{ review.user_review }}</textarea>
                 <label for="user_review">Review</label>
             </div>
-                   <!-- input image url as an option for the user - not required -->    
+
+             <!-- input Rating -->
+             <div class="input-field col s12">
+                <input id="rating" name="rating" value="{{ review.rating }}" type="number" min="0" max="5" class="validate" required>
+                <label for="rating">Rating (0 stars to 5 stars)</label>
+            </div>
+                   
+            <!-- input image url as an option for the user - not required -->    
                    <div class="input-field col s12">
                     <input id="image_url" name="image_url" value="{{ review.image_url }}" minlength="2" maxlength="150" type="url" class="validate">
                     <label for="image_url">Link to image (optional)</label>

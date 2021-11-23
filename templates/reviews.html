@@ -46,9 +46,10 @@
 
 
 <!-- reviews display cards - from Materialize -->
+{% block reviews %}
     <div class="row">
     {% for review in reviews %}
-
+   
       <div class="col s12 m6 l4">
       <div class="card hoverable"> 
         <div class="card-image">
@@ -75,13 +76,60 @@
             <div class="card-reveal">
               <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down right"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
               <span class="review-heading">Review:</span><br><span class="review-content">{{ review.user_review }}</span><br>
-              <span class="review-heading"><br><em>Added by:</em></span><span class="review-content">{{ review.added_by }}</span><br>
+              <span class="review-heading">Rating (out of 5):</span><br>
+              {% if review.rating == "0" %}
+                  <span class="review-content star-rating">{{ review.rating }} stars 
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i></span><br>
+              {% elif review.rating == "1" %}
+                  <span class="review-content star-rating">{{ review.rating }} stars 
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i></span><br>     
+              {% elif review.rating == "2" %}
+                  <span class="review-content star-rating">{{ review.rating }} stars 
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i></span><br>
+              {% elif review.rating == "3" %}
+                  <span class="review-content star-rating">{{ review.rating }} stars 
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i></span><br>
+              {% elif review.rating == "4" %}
+                  <span class="review-content star-rating">{{ review.rating }} stars 
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i></span><br>
+              {% elif review.rating == "5" %}
+                    <span class="review-content star-rating">{{ review.rating }} stars out of 5
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i></span><br>
+              {% else %}
+                      <span class="review content">No Rating added yet</span>
+              {% endif %}
+              
+              <br><span class="review-heading"><em>Added by:</em></span><span class="review-content">{{ review.added_by }}</span>
             </div>    
       </div> 
   </div>
 
-{% endfor %}
-</div>     
-                
+  {% endfor %}
+  </div>     
+  {% endblock %}            
 
 {% endblock %}

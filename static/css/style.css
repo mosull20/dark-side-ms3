@@ -148,6 +148,10 @@ form {
     color: #2f3437;
 }
 
+.star-rating i {
+    color: #a52612;
+}
+
 .search-row {
     margin-bottom: 5px;
 }

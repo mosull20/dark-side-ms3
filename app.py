@@ -139,6 +139,7 @@ def add_review():
             "title_name": request.form.get("title_name"),
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
+            "rating": request.form.get("rating"),
             "user_review": request.form.get("user_review"),
             "image_url": request.form.get("image_url"),
             "added_by": session["user"]
@@ -159,6 +160,7 @@ def edit_review(review_id):
             "title_name": request.form.get("title_name"),
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
+            "rating": request.form.get("rating"),
             "user_review": request.form.get("user_review"),
             "image_url": request.form.get("image_url"),
             "added_by": session["user"]
