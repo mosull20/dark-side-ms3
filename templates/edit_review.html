@@ -2,72 +2,74 @@
 {% block content %}
 
 
+    <!-- form utilising materialise css -->
+    <div class="row">
+        <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
+            <h2 class="header">Edit Review</h2>
+            <div class="row">
+                <!-- select category field -->
+                <div class="input-field col s12">
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled>Choose category</option>
+                        {% for category in categories %}
+                            {% if category.category_name == review.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Select Category (Book, Movie, TV Show)</label>
+                </div>
 
-<div class="row">
-    <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
-        <h2 class="header">Edit Review</h2>
-        <div class="row">
-            <!-- select category field -->
-            <div class="input-field col s12">
-                <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled>Choose category</option>
-                    {% for category in categories %}
-                        {% if category.category_name == review.category_name %}
-                         <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                        {% else %}
-                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-                <label for="category_name">Select Category (Book, Movie, TV Show)</label>
-              </div>
+                <!-- input Title name -->
+                <div class="input-field col s12">
+                    <input id="title_name" name="title_name" minlength="2" maxlength="50" value="{{ review.title_name }}" type="text" class="validate" required>
+                    <label for="title-name">Title</label>
+                </div>
 
-            <!-- input Title name -->
-            <div class="input-field col s12">
-                <input id="title_name" name="title_name" minlength="2" maxlength="50" value="{{ review.title_name }}" type="text" class="validate" required>
-                <label for="title-name">Title</label>
-            </div>
-            <!-- input Author name if book selected -->
+                <!-- input Author name if book selected -->
+                <div id="author-col" class="input-field col s12">
+                    <input id="author_name" name="author_name" minlength="2" maxlength="50" value="{{ review.author_name }}" type="text" class="validate">
+                    <label for="author_name">Author</label>
+                </div>
 
-                    <div id="author-col" class="input-field col s12">
-                        <input id="author_name" name="author_name" minlength="2" maxlength="50" value="{{ review.author_name }}" type="text" class="validate">
-                        <label for="author_name">Author</label>
-                    </div>
+                <!-- input synopsis -->
+                <div class="input-field col s12">
+                    <textarea id="synopsis" name="synopsis" class="materialize-textarea validate" data-length="200" required>{{ review.synopsis }}</textarea>
+                    <label for="synopsis">Synopsis</label>
+                </div>
 
-            <!-- input synopsis -->
-            <div class="input-field col s12">
-                <textarea id="synopsis" name="synopsis" class="materialize-textarea validate" data-length="200" required>{{ review.synopsis }}</textarea>
-                <label for="synopsis">Synopsis</label>
-            </div>
-            <!-- input review -->
-            <div class="input-field col s12">
-                <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required>{{ review.user_review }}</textarea>
-                <label for="user_review">Review</label>
-            </div>
+                <!-- input review -->
+                <div class="input-field col s12">
+                    <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required>{{ review.user_review }}</textarea>
+                    <label for="user_review">Review</label>
+                </div>
 
-             <!-- input Rating -->
-             <div class="input-field col s12">
-                <input id="rating" name="rating" value="{{ review.rating }}" type="number" min="0" max="5" class="validate" required>
-                <label for="rating">Rating (0 stars to 5 stars)</label>
-            </div>
-                   
-            <!-- input image url as an option for the user - not required -->    
-                   <div class="input-field col s12">
-                    <input id="image_url" name="image_url" value="{{ review.image_url }}" minlength="2" maxlength="150" type="url" class="validate">
-                    <label for="image_url">Link to image (optional)</label>
+                <!-- input Rating -->
+                <div class="input-field col s12">
+                    <input id="rating" name="rating" value="{{ review.rating }}" type="number" min="0" max="5" class="validate" required>
+                    <label for="rating">Rating (0 stars to 5 stars)</label>
                 </div>
                     
-        </div>
-            <!-- submit/edit button -->
-        <div class="center-align">
-            <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Edit Review
-            <i class="fas fa-sign-in-alt"></i>
-            </button>
-            <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light grey darken-4 center-align">Cancel
-                <i class="fas fa-times-circle"></i>
-              </a>
-        </div>
-    </form>
-  </div>
+                <!-- input image url as an option for the user - not required -->    
+                <div class="input-field col s12">
+                    <input id="image_url" name="image_url" value="{{ review.image_url }}" minlength="2" maxlength="150" type="url" class="validate">
+                    <label for="image_url">Link to image (optional)</label>
+                </div>          
+            </div>
+
+                <!-- submit/edit button -->
+            <div class="center-align">
+                <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Edit Review
+                <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light grey darken-4 center-align">Cancel
+                    <i class="fas fa-times-circle"></i>
+                </a>
+            </div>
+            
+        </form>
+    </div>
 
 {% endblock %}

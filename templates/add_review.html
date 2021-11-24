@@ -6,6 +6,7 @@
 <div class="row">
     <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('add_review') }}">
         <h2 class="header">Add Review</h2>
+
         <div class="row">
             <!-- select category field -->
             <div class="input-field col s12">
@@ -16,25 +17,26 @@
                     {% endfor %}
                 </select>
                 <label for="category_name">Select Category (Book, Movie, TV Show)</label>
-              </div>
+            </div>
 
             <!-- input Title name -->
             <div class="input-field col s12">
                 <input id="title_name" name="title_name" minlength="2" maxlength="50" type="text" class="validate" required>
                 <label for="title-name">Title</label>
             </div>
-            <!-- input Author name if book selected -->
-            
-                    <div id="author-col" class="input-field col s12">
-                        <input id="author_name" name="author_name" minlength="2" maxlength="50" type="text" class="validate">
-                        <label for="author_name">Author</label>
-                    </div>
+
+            <!-- input Author name if book selected -->  
+            <div id="author-col" class="input-field col s12">
+                <input id="author_name" name="author_name" minlength="2" maxlength="50" type="text" class="validate">
+                <label for="author_name">Author</label>
+            </div>
 
             <!-- input synopsis -->
             <div class="input-field col s12">
                 <textarea id="synopsis" name="synopsis" class="materialize-textarea validate" data-length="200" required></textarea>
                 <label for="synopsis">Synopsis</label>
             </div>
+
             <!-- input review -->
             <div class="input-field col s12">
                 <textarea id="user_review" name="user_review" class="materialize-textarea validate" data-length="200" required></textarea>
@@ -53,13 +55,15 @@
                 <label for="image_url">Link to image (optional)</label>
             </div>
         </div>
+
             <!-- submit button -->
         <div class="center-align">
             <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Submit
             <i class="fas fa-sign-in-alt"></i>
             </button>
         </div>
+        
     </form>
-  </div>
+</div>
 
 {% endblock %}
