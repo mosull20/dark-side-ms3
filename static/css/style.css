@@ -129,13 +129,22 @@ form {
 
 .card {
     height: 500px;
+
 }
 .card-image {
-    height: 70%
+    height: 70%;
+
 }
+/* code to resize image and keep aspect ratio for user uploaded image urls from stack overflow */
+/* https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio */ 
 .category-image {
+    object-fit: scale-down;
+    width: 100%;
     height: 100%;
-    width: auto;
+    margin-top: 10px;
+    display: inline-block !important;
+    /* height: 100%;
+    width: auto; */
 }
 
 .review-heading {
