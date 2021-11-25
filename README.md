@@ -132,7 +132,67 @@ In the future, there are a number of features I would like to implement to provi
 
 ## Testing
 Testing is detailed in a seperate document, [here](TESTING.md).
+
 ## Deployment
+
+This project was developed using the Gitpod IDE and pushed to a Github repository with the use of Git version control. The project was deployed using Heroku. 
+
+### To Clone or Fork this project
+To clone or fork this project you will need a [GitHub](https://github.com/) account
+
+To Fork this project: 
+1. Open the [Project repository homepage](https://github.com/mosull20/dark-side-ms3).
+2. At the top right of the repository page, above the Settings button, click on the **Fork** button.
+3. This will create a copy of this project in your own GitHub account. 
+
+To Clone this project:
+1. Open the [Project repository homepage](https://github.com/mosull20/dark-side-ms3).
+2. Click on the **Code** button at the top right of the file list.
+3. Under **Clone** with the HTTPS option selected, copy the url link.
+4. In your local IDE, open the terminal.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type in `git clone` and then paste the url you copied in step 3.
+7. Press enter and your local clone will be created.
+
+### Heroku Deployment
+In advance of deployment, the following steps were taken in the Gitpod environment:
+
+1. In the Gitpod environment, within the project, create a .gitignore file and an env.py file. 
+2. In the env.py file, `import os` and then set the following environment variables: 
+```
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "your unique secret key")
+os.environ.setdefault("MONGO_URI", "your unique mongo db link")
+os.environ.setdefault("MONGO_DBNAME", "your database name")
+```
+3. Ensure your env.py file is added to the .gitignore file to ensure this senstive information is not pushed to Github.
+4. Create a requirements.txt file which is used to specify what python packages are required to run this project. In the Terminal, type the following command to create this file `pip3 freeze --local > requirements.txt`.
+5. Create a Procfile by typing the following in the terminal, `echo web: python app.py > Procfile` making sure to use an uppercase 'P' when naming the file. Open the Procfile and ensure there is no blank line after the first line which should contain `web: python app.py`.
+6. Push these files to the project Github Repository.
+
+To deploy to Heroku, the following steps were taken:
+
+1. Go to the [Heroku Website](https://id.heroku.com/login) and log in.
+2. In the dashboard, select "Create New App".
+3. Choose a unique app name and select the region appropriate to your location and click on 'Create App'.
+4. From the dashboard, go to the "Deploy" tab and under "Deployment method" choose Github.
+5. Search for your repository name and click on "Connect". 
+6. Next, go to the "Settings" tab and scroll down to "Config Vars", click on "Reveal Config Vars".
+7. Enter the following keys and values which must match those in your env.py file:
+
+|Key|Value|
+|----|----|
+|IP|0.0.0.0|
+|PORT|5000|
+|SECRET_KEY|*your unique secret key*|
+|MONGO_URI|*your unique mongo db link*|
+|MONGO_DBNAME|*your database name*|
+
+8. Go back to the "Deploy" tab and click on "Enable Automatic Deployment". 
+9. Under "Manual Deploy", select "main" and click "Deploy Branch".
+10. Once the app has finished building, click on the "Open App" tab at the top right of the page. 
+
 ## Credits
 ### Content
 ### Code
