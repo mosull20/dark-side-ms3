@@ -17,12 +17,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Routes
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
 
 
+# Review pages
 @app.route("/book_reviews")
 def book_reviews():
     reviews = list(mongo.db.reviews.find())
@@ -47,6 +49,7 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+# search functionality
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -54,18 +57,21 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort reviews by title name, ascending order
 @app.route("/sort_reviews")
 def sort_reviews():
     reviews = list(mongo.db.reviews.find().sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort reviews by rating, descending order
 @app.route("/sort_reviews_rating")
 def sort_reviews_rating():
     reviews = list(mongo.db.reviews.find().sort("rating", -1))
     return render_template("reviews.html", reviews=reviews)
 
 
+# User registration
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -89,6 +95,7 @@ def register():
     return render_template("register.html")
 
 
+# User login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -115,6 +122,7 @@ def login():
     return render_template("login.html")
 
 
+# User profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # get session user's name from db
@@ -124,11 +132,13 @@ def profile(username):
         {"added_by": session["user"]}
     ))
     if session["user"]:
-        return render_template("profile.html", username=username, reviews=reviews)
+        return render_template(
+            "profile.html", username=username, reviews=reviews)
 
     return redirect(url_for("login"))
 
 
+# User log out
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -137,6 +147,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# User add review functionality
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
@@ -158,6 +169,7 @@ def add_review():
     return render_template("add_review.html", categories=categories)
 
 
+# User edit review functionality
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
@@ -177,9 +189,11 @@ def edit_review(review_id):
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_review.html", review=review, categories=categories)
+    return render_template(
+        "edit_review.html", review=review, categories=categories)
 
 
+# User delete review functionality
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
@@ -187,6 +201,7 @@ def delete_review(review_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+# Contact page form
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
