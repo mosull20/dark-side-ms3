@@ -46,6 +46,7 @@ $('#category_name').on('change', function(){
         } 
     else {
         $("#author-col").hide()
+        $("#author_name").prop('required', false)
     }
     }
 );

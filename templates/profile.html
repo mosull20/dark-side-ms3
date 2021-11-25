@@ -49,7 +49,7 @@
 
               <div class="card-reveal">
                   <span class="review-heading card-title">Synopsis:<i class="fas fa-arrow-circle-down right"></i></span> <span class="review-content">{{ review.synopsis }}</span><br>
-                  <span class="review-heading">Review:</span> <span class="review-content">{{ review.user_review }}</span><br>
+                  <span class="review-heading">Review:</span><br><span class="review-content">{{ review.user_review }}</span><br>
                   <span class="review-heading">Rating (out of 5):</span><br>
                   {% if review.rating == "0" %}
                       <span class="review-content star-rating">{{ review.rating }} stars 
