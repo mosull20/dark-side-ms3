@@ -50,6 +50,7 @@ nav li a {
     font-size: 20px;
 }
 
+
 /* --- footer --- */
 footer {
     margin-top: 20px;
@@ -207,5 +208,10 @@ form {
     }
 }
 
-
+/* Screens above 978px */
+@media screen and (min-width: 978px) {
+    .brand-logo {
+        margin-left: 20px;
+    }
+}
 
