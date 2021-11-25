@@ -34,19 +34,104 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 * [Add Review page](wireframes/add-review-page.pdf)
 * [Contact page](wireframes/contact-page.pdf)
 ### Design
+
 #### Overall Design
+
+* The aim with the design of this project is to present the user with a clear, easy to navigate, visually appealing website. With the theme of the website being quite specific to the horror genre, I decided to go with the overall color scheme of using red, black, white and grey to suport this theme. With the home page, I chose to keep it quite stark with the focus mainly on the visual of the background image and all the elements on the page designed around this image. From there, it is easy for the user to navigate the site based on what actions they wish to take. 
+* I chose to use Materialize CSS for much of the site layout, in particular, their Navigation Bar, Cards, Footer, Forms and Modal components. Overall, it provides a good user-friendly, responsive structure to the website.
+* For the reviews themselves, I chose to use the Materialize card reveal to present the reviews to the user. Using images relevent to the title makes for a better user experience and overall appeal of the content. 
+
 #### Images
+
+The main background image which I decided to use across all the pages was carefully chosen to provide a visually arresting image without distracting from the content on the page. It lends itself well to the overall color scheme of the site and allows the content to become the main focus around it. It was chosen to provide an other-worldly, ghost-like effect to convey the content of this site. 
+
+With the images in the reviews, allowing users to provide links to images with their reviews adds to the visual appeal and makes for a better user experience. I decided to make this an optional part of the add review section if users preferred not to have to search for images with their review. As a back-up I have included a simple image for each category, Book, Movie, TV Show that will load if no image url has been provided by the user. 
+
 #### Typefont
+
+I chose the fonts based on the overall horror theme of the site. Nosifer was used for the logo only to give this more emphasis and attention. Jolly Lodger was chosen as the main themed font for headings, nav bar and footer content and some of the catgeory headings on the reviews. I then chose the Roboto font for the remainder of the content for more clarity and ease of reading for the user. All of the above fonts were selected from Google Fonts. 
+
+#### Note about Wireframes
+The final design has differed from the wireframes based on what I felt worked better in terms of user experience as I was going through the process of building each page. Instead of one reviews page, I also opted to have seperate pages for each category so that on the home page, the user can chose to just look at book reviews, or just movie reviews etc., as well as the option to look at all the reviews on the site together. The layout of the reviews and way the content is displayed on each card is also something that I changed as the design in the wireframes did not work well with the content and the way I wanted to present the content to the user. I then matched the profile page to present the content in the same manner as the reviews page as anything else would be confusing to the user. I also added a modal to confirm if the user is sure they wish to delete a review. This was not specifically drawn up in the wireframes, but would always be a key feature that a user would expect before fully deleting any information they have previously created. 
+I also chose to replace the Genre field with Ratings as I felt sub genres within the horror domain would be too confusing and not provide value to the content. 
+
+## Database 
 
 ## Features
 ### Existing Features
+
+* Across the site: 
+    + Navigation bar with logo (linked back to home page), links to home page, register an account, log in, contact page and reviews with a dropdown to choose from books, movies, tv shows or all reviews. These links are visible to the casual user. Once a user has registered/logged in, the links change from Register & Log in options, to My profile, Add review and Log out. 
+    + Footer with links to social media (this will open a new tab to the main homepages of each social media platform as this website is only created for the Code Institute Milestone 3 project and so does not have live social media pages) & link to our contact page. 
+    + Use of Flash messages to update the user when an action has been taken, eg adding a review, logging in, logging out etc.
+    + Fully responsive to ensure a good user experience on all devices. 
+
+* Home Page
+    + Content area with explanation of what the site is about and what users can do once an account is created along with links to the register & log in pages, followed by simple box links to the 3 main categores of reviews on the site - books, movies, tv shows. 
+    
+
+* Reviews Pages
+    + Four pages for the user to choose from, all with consistent styling. Book reviews page shows only reviews in the 'Book' category, Movies shows only Movie category reviews and TV Show reviews page only brings up the TV Show reviews. Or the user can see all the reviews on the website, all categories showing. 
+    + Search Feature - On each page there is a search option at the top which clearly shows the user they can enter text to search through the website by Title name and shows any results matching the user's input, or display a message that no results were found. 
+    + Sort Feature - On each page, I have also provided the 'Sort By' option. This is in the form of a dropdown and provides the user with two options to choose from: Sort by Title in alphabeticla order, A-Z; or Sort by Rating (this is set-up to show the highest rated first, lowest rated last) and this is sorted based on the number of stars the user has given to the title they have reviewed. If no rating has been added, this is noted within the review and will display last in this sort feature. 
+    + Reviews are in card reveal format, they show the image associated with the review, the category and title name. The book category also shows the Author name. An arrow up icon is used to convey to the user they can click here for more information to be revealed. On clicking, the synopsis, review, rating and added by information is revealed. A click on the arrow down will close the card window again. 
+
+* Add Review Page   
+    + For registered and logged in users, this page allows them to create their own review. It is laid out in form format, with the Author field hidden once Movie or TV Show has been selected as it is not a relevent field other than in Books. Included is an option to provide a link to an image url address, this is optional which is made clear to the user. There is a character limit to cap the content. Keeping the reviews and synopses to a certain length provides for a better user experience for the aims of this particular site.
+    + On clicking submit, it returns the user to their profile page with the review they have added showing. 
+
+* Profile Page
+    + For registered and logged in users, this page shows any reviews they have created and submitted to the site. The reviews show edit and delete buttons so the user can perform these actions as they wish and will be redirected to the edit review page or a confirm delete modal will display if the delete option is chosen. An add review button is also displayed here. 
+    + If no reviews have been added by this user, a message will display to encourage the user to add a review. 
+
+* Edit Review Page
+    + Form is consistent with the Add Review form to ensure ease of use for the user, it is prefilled with all the details of the relevant review so the user can see what needs to be changed easily. 
+
+* Register Page/ Log In Page/ Contact Page
+    + Same format used across these pages with the form on each containing clear, concise guidance for the user. 
+    + Once registered or logged in successfully, the user will be redirected to their profile page. 
+    + Once the contact form has been submitted, user will see a message letting them know their form has been successfully submitted, and will refresh the page with a blank form. 
+
 ### Features left to implement
+
+In the future, there are a number of features I would like to implement to provide more value to the user: 
+
+* A rating system that all registered users can rate any title not just the ones they have created and display a count of those ratings, either based on stars as the rating currently is or upvotes
+* Ability for registered users to make a 'favourites' list, so they can save titles to this list to remind them what to watch or read next
+* Ability for registered users to add their own review to a title already in the database that another user has created, rather than having to create a full new title to review. 
+* Add an event category and expand the site to include events such as local horror movie screenings, conventions or any further community events that would be of interest to the horror fans and allow registered users to add events.
+
 
 ## Technologies Used
 #### Languages
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 #### Programs, Frameworks, Libraries, Resources
+* [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) Template engine for Python 
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) Python Web Framework
+* [GitHub](https://github.com/) Code hosting platform
+* [Gitpod](https://www.gitpod.io/) IDE used for writing and editing code, version control
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) Cloud platform
+* [MongoDB](https://www.mongodb.com/) Document Oreiented Database program
+* [jQuery](https://jquery.com/) JavaScript Library
+* [Materialize CSS](https://materializecss.com/) Front end Framework
+* [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) Extension to bridge Flask with MongoDB
+* [Werkzeug](https://pypi.org/project/Werkzeug/) WSGI web application library - used for password security
+* [Google Fonts](https://fonts.google.com/) Font library
+* [Font awesome](https://fontawesome.com/) Icons
+* [Pixlr](https://pixlr.com/e/) Image Editor used for main background image optimisation
+* [TinyPNG](https://tinypng.com/) Image compressor
+* [Balsamiq](https://balsamiq.com/wireframes/) Wireframe software
+* [dbdiagram.io](https://dbdiagram.io/home) Database diagram design software
+* [coolers.co](https://coolors.co/) Color scheme generator
+* [Randomkeygen.com](https://randomkeygen.com/) Secure password/secret key generator
+
 
 ## Testing
+Testing is detailed in a seperate document, [here](TESTING.md).
 ## Deployment
 ## Credits
 ### Content
