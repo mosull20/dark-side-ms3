@@ -175,9 +175,12 @@ form {
     margin-bottom: 5px;
 }
 
+.sort-column {
+    text-align: right;
+}
 .sort-dropdown {
     color: #a52612;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 10px;
 }
 

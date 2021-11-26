@@ -24,25 +24,28 @@ def home():
     return render_template("home.html")
 
 
-# Review pages
+# Get book reviews only
 @app.route("/book_reviews")
 def book_reviews():
-    reviews = list(mongo.db.reviews.find())
-    return render_template("book_reviews.html", reviews=reviews)
+    reviews = list(mongo.db.reviews.find({"category_name": "Book"}))
+    return render_template("reviews.html", reviews=reviews)
 
 
+# Get movie reviews only
 @app.route("/movie_reviews")
 def movie_reviews():
-    reviews = list(mongo.db.reviews.find())
-    return render_template("movie_reviews.html", reviews=reviews)
+    reviews = list(mongo.db.reviews.find({"category_name": "Movie"}))
+    return render_template("reviews.html", reviews=reviews)
 
 
+# Get tv show reviews only
 @app.route("/tvshow_reviews")
 def tvshow_reviews():
-    reviews = list(mongo.db.reviews.find())
-    return render_template("tvshow_reviews.html", reviews=reviews)
+    reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}))
+    return render_template("reviews.html", reviews=reviews)
 
 
+# Get all reviews
 @app.route("/get_reviews")
 def get_reviews():
     reviews = list(mongo.db.reviews.find())
@@ -57,7 +60,7 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
-# sort reviews by title name, ascending order
+# sort all reviews by title name, ascending order
 @app.route("/sort_reviews")
 def sort_reviews():
     reviews = list(mongo.db.reviews.find().sort("title_name", 1))
