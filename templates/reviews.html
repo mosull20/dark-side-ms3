@@ -3,11 +3,12 @@
 
   <div class="col s12 m7">
     
-      {% if request.endpoint == 'book_reviews' %}
+    <!-- request.endpoint used to specify action to take based on what route chosen - from Stack overflow (details in README) -->
+      {% if ( (request.endpoint == 'book_reviews') or (request.endpoint == 'sort_book_reviews') ) %}
           <h2 class="header">Book Reviews</h2>
-        {% elif request.endpoint == 'movie_reviews' %}
+        {% elif ( (request.endpoint == 'movie_reviews') or (request.endpoint == 'sort_movie_reviews') ) %}
           <h2 class="header">Movie Reviews</h2>
-        {% elif request.endpoint == 'tvshow_reviews' %}
+          {% elif ( (request.endpoint == 'tvshow_reviews') or (request.endpoint == 'sort_tvshow_reviews') ) %}
           <h2 class="header">TV Show Reviews</h2>
         {% else %}
           <h2 class="header">All Reviews</h2>
@@ -42,7 +43,7 @@
 
 
       <!-- 'sort by' section -->
-      {% if reviews|length > 3 %}
+      {% if reviews|length > 1 %}
       <div class="row">
         <div class="col s6 m3 l2 right sort-column"> 
           <span class="sort-dropdown">Sort By:</span>
@@ -50,15 +51,27 @@
 
           <!-- Dropdown Structure -->
           <ul id='dropdown3' class='dropdown-content'>
-            <li><a class="black-text" href="{{ url_for('sort_reviews') }}">Title A-Z</a></li>
+            <!-- request.path used to specify action to take based on current url - from Stack overflow (details in README) -->
+            {% if request.path == '/book_reviews' %}
+            <li><a class="black-text" href="{{ url_for('sort_book_reviews') }}">Title A-Z</a></li>
             <li><a class="black-text" href="{{ url_for('sort_reviews_rating') }}">Rating</a></li>
+            {% elif request.path == '/movie_reviews' %}
+              <li><a class="black-text" href="{{ url_for('sort_movie_reviews') }}">Title A-Z</a></li>
+              <li><a class="black-text" href="{{ url_for('sort_reviews_rating') }}">Rating</a></li>
+            {% elif request.path == '/tvshow_reviews' %}
+              <li><a class="black-text" href="{{ url_for('sort_tvshow_reviews') }}">Title A-Z</a></li>
+              <li><a class="black-text" href="{{ url_for('sort_reviews_rating') }}">Rating</a></li>
+            {% else %}
+              <li><a class="black-text" href="{{ url_for('sort_reviews') }}">Title A-Z</a></li>
+              <li><a class="black-text" href="{{ url_for('sort_reviews_rating') }}">Rating</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>
       {% endif %}
 
    <!-- reviews display utilizing materialize css card reveal display -->
-  {% block reviews %}
+
       <div class="row">
         <!-- retrieve info from db and fill cards to display -->
         {% for review in reviews %}
@@ -169,6 +182,5 @@
           </div>
         {% endfor %}
       </div>     
-  {% endblock %}            
-
+           
 {% endblock %}

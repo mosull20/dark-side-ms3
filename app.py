@@ -67,6 +67,24 @@ def sort_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/sort_book_reviews")
+def sort_book_reviews():
+    reviews = list(mongo.db.reviews.find({"category_name": "Book"}).sort("title_name", 1))
+    return render_template("reviews.html", reviews=reviews)
+
+
+@app.route("/sort_movie_reviews")
+def sort_movie_reviews():
+    reviews = list(mongo.db.reviews.find({"category_name": "Movie"}).sort("title_name", 1))
+    return render_template("reviews.html", reviews=reviews)
+
+
+@app.route("/sort_tvshow_reviews")
+def sort_tvshow_reviews():
+    reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}).sort("title_name", 1))
+    return render_template("reviews.html", reviews=reviews)
+
+
 # sort reviews by rating, descending order
 @app.route("/sort_reviews_rating")
 def sort_reviews_rating():
