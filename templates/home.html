@@ -4,9 +4,9 @@
   <h1>The Dark Side</h1>
   <h2>Welcome to The Dark Side, where like minded horror fans can share reviews on all things horror</h2>
   <p class="intro-text">Want to find your next great read, something terrifying for movie night, next addictive horror tv series?
-    Have a look at all our reviews below. Favourite show or book not here? Join the horror community and
-    add your own reviews to share with everyone. <br>Sign up now for a free account!
-    Already registered? Head over to our login page.</p>
+    Browse the categories below or <a href="{{ url_for('get_reviews') }}">click here to see all reviews</a>. Favourite show or book not here? Join the horror community and
+    add your own reviews to share with everyone. <br><a href="{{ url_for('register') }}">Sign up now</a> for a free account!
+    Already registered? Head over to our <a href="{{ url_for('login') }}">login page</a>.</p>
 
   <!-- Boxes to show review categories -->
   <div class="row">

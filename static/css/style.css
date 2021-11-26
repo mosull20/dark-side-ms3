@@ -85,6 +85,9 @@ form {
 .form-row {
     margin: 40px 20px 40px 20px;
 }
+.register-links {
+    color: #a52612;
+}
 
 /* --- buttons --- */
 .btn {
@@ -97,9 +100,12 @@ form {
 }
 
 .search-button {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 5px;
     margin-bottom: 10px;
+}
+.reset-icon {
+    padding-right: 8px;
 }
 
 /* --- flash messages --- */
@@ -112,6 +118,9 @@ form {
     font-size: 20px;
     font-weight: 700;
     color: #2f3437;
+}
+.intro-text a {
+    color:#a52612;
 }
 
 .category-box {
