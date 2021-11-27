@@ -57,6 +57,14 @@ I also chose to replace the Genre field with Ratings as I felt sub genres within
 
 ## Database 
 
+I used MongoDB as the database for this project, as a non relational, document database, it gives more flexibility to this type of site. 
+I used dbdiagram.io when designing the database schema that would best facilitate this project. I based my schema on using 3 collections - 'users', 'categories' and 'reviews'.
+* Database schema:
+
+![Database schema](static/images/readme-images/dbschema-ms3.png)
+
+* A note from the above design, I decided against making use of a 'Genre' Field and instead added a 'Rating' which I felt provide more value to the website and a better UX.
+
 ## Features
 ### Existing Features
 
@@ -95,7 +103,7 @@ I also chose to replace the Genre field with Ratings as I felt sub genres within
 ### Features left to implement
 
 In the future, there are a number of features I would like to implement to provide more value to the user: 
-
+* Pagination would provide a better user experience as the amount of reviews increase. This would be the most important feature that I would add next outside of the project assessment timeline.
 * A rating system that all registered users can rate any title not just the ones they have created and display a count of those ratings, either based on stars as the rating currently is or upvotes
 * Ability for registered users to make a 'favourites' list, so they can save titles to this list to remind them what to watch or read next
 * Ability for registered users to add their own review to a title already in the database that another user has created, rather than having to create a full new title to review. 
@@ -195,6 +203,8 @@ To deploy to Heroku, the following steps were taken:
 
 ## Credits
 ### Content
+
+
 ### Code
 
 * Jquery code to resolve issue with no validation on Materialize select element taken directly from Code Institute course work, 'Materialize Form Validation' from the Mini Project video content
@@ -206,4 +216,8 @@ To deploy to Heroku, the following steps were taken:
     + Then, one other issue to solve in tandem with the above was getting the correct h2 to show after the sort button was clicked on and I found the correct syntax to provide 2 checks in the jinja if statement once more on Stack Overflow [here](https://stackoverflow.com/questions/15168831/how-to-write-a-multiline-jinja-statement).
 ### Media
 #### Images
+
+* Main Background image in use across the site 
+
+  
 ### Acknowledgements
