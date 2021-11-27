@@ -60,6 +60,7 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort-by functionality
 # sort all reviews by title name, ascending order
 @app.route("/sort_reviews")
 def sort_reviews():
@@ -67,28 +68,52 @@ def sort_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort all book reviews by title name, ascending order
 @app.route("/sort_book_reviews")
 def sort_book_reviews():
     reviews = list(mongo.db.reviews.find({"category_name": "Book"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort all movie reviews by title name, ascending order
 @app.route("/sort_movie_reviews")
 def sort_movie_reviews():
     reviews = list(mongo.db.reviews.find({"category_name": "Movie"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
+# sort all tv show reviews by title name, ascending order
 @app.route("/sort_tvshow_reviews")
 def sort_tvshow_reviews():
     reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
-# sort reviews by rating, descending order
+# sort all reviews by rating, descending order
 @app.route("/sort_reviews_rating")
 def sort_reviews_rating():
     reviews = list(mongo.db.reviews.find().sort("rating", -1))
+    return render_template("reviews.html", reviews=reviews)
+
+
+# sort book reviews by rating, descending order
+@app.route("/sort_book_reviews_rating")
+def sort_book_reviews_rating():
+    reviews = list(mongo.db.reviews.find({"category_name": "Book"}).sort("rating", -1))
+    return render_template("reviews.html", reviews=reviews)
+
+
+# sort movie reviews by rating, descending order
+@app.route("/sort_movie_reviews_rating")
+def sort_movie_reviews_rating():
+    reviews = list(mongo.db.reviews.find({"category_name": "Movie"}).sort("rating", -1))
+    return render_template("reviews.html", reviews=reviews)
+
+
+# sort tv show reviews by rating, descending order
+@app.route("/sort_tvshow_reviews_rating")
+def sort_tvshow_reviews_rating():
+    reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}).sort("rating", -1))
     return render_template("reviews.html", reviews=reviews)
 
 
