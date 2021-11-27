@@ -3,14 +3,14 @@
 
     <!-- form utilising materialise css -->
     <div class="row">
-        <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('login') }}">
+        <form class="col s12 m10 offset-m1 l8 offset-l2 grey lighten-4" method="POST" action="{{ url_for('login') }}">
             <h2>Log In</h2>
 
             <!-- username input field -->
             <div class="row form-row">
                 <div class="input-field col s12">
                   <input placeholder="Enter your username" name="username" id="username" type="text" class="validate">
-                  <label for="username"><i class="fas fa-user"></i>Username</label>
+                  <label for="username"><i class="fas fa-user form-icon"></i>Username</label>
                 </div>
             </div>
 
@@ -18,13 +18,13 @@
             <div class="row">
                 <div class="input-field col s12">
                   <input placeholder="Enter your password" name="password" id="password" type="password" class="validate">
-                  <label for="password"><i class="fas fa-lock"></i>Password</label>
+                  <label for="password"><i class="fas fa-lock form-icon"></i>Password</label>
                 </div>
             </div>
 
             <!-- log in button -->
             <div class="center-align">
-                <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Log In
+                <button class="btn waves-effect waves-light red darken-4 center-align button-send" type="submit">Log In
                   <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>

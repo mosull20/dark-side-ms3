@@ -4,30 +4,32 @@
 
   <div class="row">
     <!-- form utilising materialize css -->
-    <form class="col s12 m8 offset-m2 grey lighten-4" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m10 offset-m1 l8 offset-l2 grey lighten-4" method="POST" action="{{ url_for('register') }}">
         <h2>Register</h2>
 
         <!-- username input field -->
         <div class="row form-row">
           <div class="input-field col s12">
-            <input placeholder="Choose a username 5 - 15 characters long" name="username" id="username" type="text" 
+            <input placeholder="Username" name="username" id="username" type="text" 
               minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-            <label for="username"><i class="fas fa-user"></i>Username</label>
+            <label for="username"><i class="fas fa-user form-icon"></i>Username</label>
+            <span class="label-text">(Choose a Username 5 - 15 characters long, numbers and letters only)</span>
           </div>
         </div>
 
         <!-- password input field -->
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Choose a password 5 - 15 characters long" id="password" name="password" type="password" 
+            <input placeholder="Password" id="password" name="password" type="password" 
               minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-            <label for="password"><i class="fas fa-lock"></i>Password</label>
+            <label for="password"><i class="fas fa-lock form-icon"></i>Password</label>
+            <span class="label-text">(Choose a password 5 - 15 characters long, numbers and letters only)</span>
           </div>
         </div>
 
         <!-- register button -->
         <div class="center-align">
-          <button class="btn waves-effect waves-light red darken-4 center-align" type="submit">Register
+          <button class="btn waves-effect waves-light red darken-4 center-align button-send" type="submit">Register
             <i class="fas fa-sign-in-alt"></i>
           </button>
         </div>
