@@ -136,6 +136,7 @@ In the future, there are a number of features I would like to implement to provi
 * [dbdiagram.io](https://dbdiagram.io/home) Database diagram design software
 * [coolers.co](https://coolors.co/) Color scheme generator
 * [Randomkeygen.com](https://randomkeygen.com/) Secure password/secret key generator
+* [Favicon.io](https://favicon.io/favicon-converter/) Favicon generator
 
 
 ## Testing
@@ -216,7 +217,7 @@ To deploy to Heroku, the following steps were taken:
     + Then, one other issue to solve in tandem with the above was getting the correct h2 to show after the sort button was clicked on and I found the correct syntax to provide 2 checks in the jinja if statement once more on Stack Overflow [here](https://stackoverflow.com/questions/15168831/how-to-write-a-multiline-jinja-statement).
 ### Media
 #### Images
-
+* Favicon generated on [Favicon.io](https://favicon.io/favicon-converter/) using image from Pixabay - Image by <a href="https://pixabay.com/users/b0red-4473488/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">b0red</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">Pixabay</a>
 * Main Background image in use across the site 
 
   
