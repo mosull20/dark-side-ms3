@@ -226,10 +226,9 @@ def edit_review(review_id):
             "synopsis": request.form.get("synopsis"),
             "rating": request.form.get("rating"),
             "user_review": request.form.get("user_review"),
-            "image_url": request.form.get("image_url"),
-            "added_by": session["user"]
+            "image_url": request.form.get("image_url")
             }
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, updated_review)
+        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, {"$set": updated_review})
         flash("Your review has been successfully updated")
         return redirect(url_for("profile", username=session["user"]))
 
