@@ -199,7 +199,7 @@ def add_review():
     if request.method == "POST":
         review = {
             "category_name": request.form.get("category_name"),
-            "title_name": request.form.get("title_name").capitalize(),
+            "title_name": request.form.get("title_name").title(),
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
             "rating": request.form.get("rating"),
@@ -221,7 +221,7 @@ def edit_review(review_id):
     if request.method == "POST":
         updated_review = {
             "category_name": request.form.get("category_name"),
-            "title_name": request.form.get("title_name").capitalize(),
+            "title_name": request.form.get("title_name").title(),
             "author_name": request.form.get("author_name"),
             "synopsis": request.form.get("synopsis"),
             "rating": request.form.get("rating"),
