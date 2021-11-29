@@ -200,6 +200,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# function to check if valid image url
 def is_url_image(img_url):
     image_formats = ("image/png", "image/jpeg", "image/jpg")
     r = requests.head(img_url)
@@ -213,11 +214,11 @@ def is_url_image(img_url):
 def add_review():
     if request.method == "POST":
 
-        # check image
-    
+        # check image url if one provided by user
         review_image = request.form.get("image_url")
         image_url = ""
         if review_image:
+            # function call to verify image
             if is_url_image(review_image):
                 image_url = review_image
                 flash("Image verified")
