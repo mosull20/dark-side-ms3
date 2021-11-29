@@ -18,6 +18,18 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Functions
+# function to check if valid image url
+# code from Stack Overflow,
+# https://stackoverflow.com/questions/10543940/check-if-a-url-to-an-image-is-up-and-exists-in-python
+def is_url_image(img_url):
+    image_formats = ("image/png", "image/jpeg", "image/jpg")
+    r = requests.head(img_url)
+    if r.headers["content-type"] in image_formats:
+        return True
+    return False
+
+
 # Routes
 @app.route("/")
 @app.route("/home")
@@ -198,15 +210,6 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
-
-# function to check if valid image url
-def is_url_image(img_url):
-    image_formats = ("image/png", "image/jpeg", "image/jpg")
-    r = requests.head(img_url)
-    if r.headers["content-type"] in image_formats:
-        return True
-    return False
 
 
 # User add review functionality

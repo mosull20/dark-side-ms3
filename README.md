@@ -217,6 +217,7 @@ To deploy to Heroku, the following steps were taken:
     + Then, one other issue to solve in tandem with the above was getting the correct h2 to show after the sort button was clicked on and I found the correct syntax to provide 2 checks in the jinja if statement once more on Stack Overflow [here](https://stackoverflow.com/questions/15168831/how-to-write-a-multiline-jinja-statement).
 
 * Code for error handling found at [flask.palletsprojects.com](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
+* Issue with some user uploaded links being broken so with guidance from CI tutor, found solution & function code for image verification on [Stack overflow](https://stackoverflow.com/questions/10543940/check-if-a-url-to-an-image-is-up-and-exists-in-python) and implented a generic back up image to load if link not working, or not a valid filetype or not provided. 
 ### Media
 #### Images
 * Favicon generated on [Favicon.io](https://favicon.io/favicon-converter/) using image from Pixabay - Image by <a href="https://pixabay.com/users/b0red-4473488/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">b0red</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">Pixabay</a>
