@@ -1,4 +1,5 @@
 import os
+import requests
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
@@ -199,10 +200,31 @@ def logout():
     return redirect(url_for("login"))
 
 
+def is_url_image(img_url):
+    image_formats = ("image/png", "image/jpeg", "image/jpg")
+    r = requests.head(img_url)
+    if r.headers["content-type"] in image_formats:
+        return True
+    return False
+
+
 # User add review functionality
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
+
+        # check image
+    
+        review_image = request.form.get("image_url")
+        image_url = ""
+        if review_image:
+            if is_url_image(review_image):
+                image_url = review_image
+                flash("Image verified")
+            else:
+                image_url = "../static/images/Book-image.jpg"
+                flash("Image not valid, will apply default image instead")
+
         review = {
             "category_name": request.form.get("category_name"),
             "title_name": request.form.get("title_name").title(),
@@ -210,7 +232,7 @@ def add_review():
             "synopsis": request.form.get("synopsis"),
             "rating": request.form.get("rating"),
             "user_review": request.form.get("user_review"),
-            "image_url": request.form.get("image_url"),
+            "image_url": image_url,
             "added_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
