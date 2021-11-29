@@ -37,6 +37,7 @@ h2, h3, h4 {
     text-shadow: 2px 2px 10px whitesmoke;
 }
 
+
 /* --- nav bar styling --- */
 .nav-wrapper {
     background-color: #2f3437;
@@ -128,6 +129,10 @@ form {
     padding-left: 10px;
 }
 
+.add-icon {
+    padding-left: 10px;
+}
+
 /* --- flash messages --- */
 .flashes h4 {
     line-height: 3;
@@ -138,6 +143,7 @@ form {
     font-size: 20px;
     font-weight: 700;
     color: #2f3437;
+    text-shadow: 2px 2px 10px whitesmoke;
 }
 .intro-text a {
     color:#a52612;

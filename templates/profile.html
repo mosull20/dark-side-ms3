@@ -15,7 +15,7 @@
           <h2 class="header profile-header">My Reviews</h2>
           <div class="row center-align">
             <a href="{{ url_for('add_review') }}" class="btn-large waves-effect waves-light red darken-4 center-align">Add New Review
-                <i class="fas fa-pen"></i>
+              <i class="fas fa-plus  add-icon"></i>
             </a>
           </div>
         </div>
@@ -102,7 +102,7 @@
         
             <!-- Edit & Delete buttons  -->
             <div class="center-align">
-                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small waves-effect waves-light red darken-4 center-align">Edit
+                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small waves-effect waves-light grey darken-4 center-align">Edit
                   <i class="fas fa-pen"></i>
                 </a>
 
@@ -137,9 +137,9 @@
           </div>
       </div>
       <div class="row center-align">
-          <a href="{{ url_for('add_review') }}" class="btn-large waves-effect waves-light red darken-4 center-align">Add New Review
-              <i class="fas fa-pen"></i>
-          </a>
+        <a href="{{ url_for('add_review') }}" class="btn-large waves-effect waves-light red darken-4 center-align">Add New Review
+          <i class="fas fa-plus  add-icon"></i>
+        </a>
       </div>
 
     {% endif %}
