@@ -248,6 +248,19 @@ def add_review():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
+
+        # check image url if one provided by user
+        review_image = request.form.get("image_url")
+        image_url = ""
+        if review_image:
+            # function call to verify image
+            if is_url_image(review_image):
+                image_url = review_image
+                flash("Image verified")
+            else:
+                image_url = "../static/images/Book-image.jpg"
+                flash("Image not valid, will apply default image instead")
+
         updated_review = {
             "category_name": request.form.get("category_name"),
             "title_name": request.form.get("title_name").title(),
@@ -255,7 +268,7 @@ def edit_review(review_id):
             "synopsis": request.form.get("synopsis"),
             "rating": request.form.get("rating"),
             "user_review": request.form.get("user_review"),
-            "image_url": request.form.get("image_url")
+            "image_url": image_url
             }
         mongo.db.reviews.update_one(
             {"_id": ObjectId(review_id)}, {"$set": updated_review})

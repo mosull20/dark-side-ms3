@@ -53,9 +53,15 @@
                 </div>
                     
                 <!-- input image url as an option for the user - not required -->    
+                
                 <div class="input-field col s12">
+                    {% if review.image_url == "../static/images/Book-image.jpg" %}
+                    <input id="image_url" name="image_url" value="" minlength="2" maxlength="150" type="url" class="validate">
+                    <label for="image_url">Link to image (optional)</label>
+                    {% else %}
                     <input id="image_url" name="image_url" value="{{ review.image_url }}" minlength="2" maxlength="150" type="url" class="validate">
                     <label for="image_url">Link to image (optional)</label>
+                    {% endif %}
                 </div>          
             </div>
 
