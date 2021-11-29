@@ -71,21 +71,24 @@ def sort_reviews():
 # sort all book reviews by title name, ascending order
 @app.route("/sort_book_reviews")
 def sort_book_reviews():
-    reviews = list(mongo.db.reviews.find({"category_name": "Book"}).sort("title_name", 1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "Book"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
 # sort all movie reviews by title name, ascending order
 @app.route("/sort_movie_reviews")
 def sort_movie_reviews():
-    reviews = list(mongo.db.reviews.find({"category_name": "Movie"}).sort("title_name", 1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "Movie"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
 # sort all tv show reviews by title name, ascending order
 @app.route("/sort_tvshow_reviews")
 def sort_tvshow_reviews():
-    reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}).sort("title_name", 1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "TV Show"}).sort("title_name", 1))
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -99,21 +102,24 @@ def sort_reviews_rating():
 # sort book reviews by rating, descending order
 @app.route("/sort_book_reviews_rating")
 def sort_book_reviews_rating():
-    reviews = list(mongo.db.reviews.find({"category_name": "Book"}).sort("rating", -1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "Book"}).sort("rating", -1))
     return render_template("reviews.html", reviews=reviews)
 
 
 # sort movie reviews by rating, descending order
 @app.route("/sort_movie_reviews_rating")
 def sort_movie_reviews_rating():
-    reviews = list(mongo.db.reviews.find({"category_name": "Movie"}).sort("rating", -1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "Movie"}).sort("rating", -1))
     return render_template("reviews.html", reviews=reviews)
 
 
 # sort tv show reviews by rating, descending order
 @app.route("/sort_tvshow_reviews_rating")
 def sort_tvshow_reviews_rating():
-    reviews = list(mongo.db.reviews.find({"category_name": "TV Show"}).sort("rating", -1))
+    reviews = list(mongo.db.reviews.find(
+        {"category_name": "TV Show"}).sort("rating", -1))
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -228,7 +234,8 @@ def edit_review(review_id):
             "user_review": request.form.get("user_review"),
             "image_url": request.form.get("image_url")
             }
-        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, {"$set": updated_review})
+        mongo.db.reviews.update_one(
+            {"_id": ObjectId(review_id)}, {"$set": updated_review})
         flash("Your review has been successfully updated")
         return redirect(url_for("profile", username=session["user"]))
 
@@ -252,6 +259,13 @@ def contact():
     if request.method == "POST":
         flash("Thank you, your message has been successfully sent.")
     return render_template("contact.html")
+
+
+# error handling code from
+# https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
 
 
 if __name__ == "__main__":
