@@ -88,11 +88,22 @@ Contact Page
 
 **Further functionality testing with a logged-in user** 
 
+My Profile Page/Add New Review Page/Edit & Delete functions
+* Repeated all above steps for navbar and footer functionality. 
+* Further steps taken:
+    + Log in as a user that has no reviews to ensure correct message displays along with the Add Review button, click on this, which loads the add review page, created new review to check all functioning. Redirected back to profile page as expected on completion. Review displays here with edit and delete buttons underneath. Tested both to ensure all functioning and review can be either edited or deleted. Appropriate delete warning and check displayed to the user on pressing delete, requiring user to click again to confirm. 
+    Tested image verification works as expected by uploading review with 'link to image' field left blank, then with a link that did not contain an image, and finally a link to a valid image address. All functioned as expected. 
+    + Logged out and logged back in as same user to ensure reviews added by that user display correctly on profile page. 
+    + Tested various scenarios to prompt flash messages to make sure all feedback messages to the user display as intended. 
 
+Admin additional functionality  
+* Logged in as admin to ensure that on the reviews page, all reviews on the site show the edit and delete buttons and these function correctly. Edited a review added under another username, changes saved and without overwriting the 'added-by' field so the review is still credited to the orginal user and thus will still show on their profile page when logged in, tested this to ensure works as expected. Ensured the delete button functions correctly so the admin can delete any user reviews that might be unsuitable. 
 
 
 
 #### Responsiveness
+
+
 #### Cross Browser
 
 ### User Stories Testing
@@ -100,6 +111,8 @@ Contact Page
 ### Bugs & Fixes
 
 * Had problems conecting to MongoDB initially. I double checked all syntax, created new user to access the database and still was unable to solve this problem. After creating a new account, new cluster, new database and user I was able to then get it all functioning properly. 
+
+* After adding functionality for 'admin' user to edit (and delete) all reviews regardless of who added them, I found initially the added-by field would be overwritten and the review now showed as added-by admin rather than original user and would no longer display on the user's profile page. Code Institute Tutor suggested looking in to using the `$set` operator to only update fields contained in the dict being created and then leaving out the 'added-by' field. This worked to solve the issue. 
 
 * After adding a couple of reviews with the title name in lowercase, I found that the Sort by Title function returned the non-capitalized titles at the end, sorted only as compared to each other as opposed to being sorted together with the capitalized names. I first tried to use the .lower() method as I was sorting the results but this resulted in an error. The solutions I was finding after googling the issue seemed overly complicated but I did find out it is common of MongoDB to return sort requests in this way, and so I decided to try the .capitalize() method as the title name is being sent to Mongo Db instead. This very simple solution worked to solve this problem. Further to this, I then changed .capitalize() method to .title() after once more consulting google, as I wanted the movie or book titles to capitalize each word in the title rather than only the first.
 

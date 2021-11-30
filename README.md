@@ -120,6 +120,8 @@ In the future, there are a number of features I would like to implement to provi
 * A rating system that all registered users can rate any title not just the ones they have created and display a count of those ratings, either based on stars as the rating currently is or upvotes
 * Ability for registered users to make a 'favourites' list, so they can save titles to this list to remind them what to watch or read next
 * Ability for registered users to add their own review to a title already in the database that another user has created, rather than having to create a full new title to review. 
+* Ability for registered users to delete their account. 
+* Add further admin capabilites such as being able to delete a user. 
 * Add an event category and expand the site to include events such as local horror movie screenings, conventions or any further community events that would be of interest to the horror fans and allow registered users to add events.
 * Note: I would add further validation to the contact form in the future (such as email.js) but as this was covered in my previous project, I chose to focus more on the data side of this project and ensure the CRUD functionality was my priority within the time constraints of the project.
 
@@ -151,6 +153,7 @@ In the future, there are a number of features I would like to implement to provi
 * [coolers.co](https://coolors.co/) Color scheme generator
 * [Randomkeygen.com](https://randomkeygen.com/) Secure password/secret key generator
 * [Favicon.io](https://favicon.io/favicon-converter/) Favicon generator
+* [Website Mockup Generator](https://websitemockupgenerator.com/) used to generate responsive screenshot
 
 
 ## Testing
