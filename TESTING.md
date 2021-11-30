@@ -103,8 +103,15 @@ Admin additional functionality
 
 #### Responsiveness
 
+* Checked the responsiveness of the website at every stage of development throughout the project using Chrome Dev Tools. 
+* Also checked responsiveness at [Responsinator.com](https://www.responsinator.com/)
 
 #### Cross Browser
+The website was developed and tested primarily using the Chrome browser. I then checked the following browsers to ensure all worked as expected - 
++ Firefox
++ Opera
++ Safari
++ Microsoft Edge
 
 ### User Stories Testing
 
