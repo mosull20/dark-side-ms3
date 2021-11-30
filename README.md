@@ -226,3 +226,8 @@ Content for reviews added by myself was compiled by accessing various book and f
 * Default image to load if no user image uploaded or not valid: Image by <a href="https://pixabay.com/users/thedigitalartist-202249/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2554660">Pete Linforth</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2554660">Pixabay</a>
   
 ### Acknowledgements
+
+* The Code Institute Slack community, has once again throughout this project, been a valuable resource. In particular, there were two resources I found very helpful, MS3 planning with Ed Bradley and Amy O'Shea's MS3 planning your project. My thanks to both for providing such great guidance to other students.
+* Stack Overflow is another constant source of helpful guidance and answers to so many questions. 
+* My mentor, Nishant Kumar, has been so supportive and encouraging throughout this project with some great advice once again for MS3. 
+* The Tutor Support on Code Institute has also been very helpful during this project process. 
