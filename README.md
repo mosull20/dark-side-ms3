@@ -57,7 +57,7 @@ With the images in the reviews, allowing users to provide links to images with t
 I used [coolors.co](https://coolors.co/) to generate a color scheme for the website. 
 Initially, I planned on using a 4th color but found overall, it worked better keeping it to the overall red, black and white scheme.
 
-![Color scheme](static/images/readme-images/color-scheme.pdf)
+![Color scheme](static/images/readme-images/color-scheme.png)
 
 
 #### Typefont
