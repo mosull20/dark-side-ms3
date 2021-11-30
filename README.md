@@ -1,8 +1,14 @@
 # The Dark Side
 
-The Dark Side is a review site for all things horror related - books, movies and tv shows. Users can read reviews other horror fans have uploaded and if they wish, they can join in the horror community by creating an account and adding their own reviews. 
+![Website mockup screenshot](static/images/readme-images/all-devices-black.png)
 
 View the live website [here](https://the-dark-side.herokuapp.com/).
+
+---
+
+The Dark Side is a review site for all things horror related - books, movies and tv shows. Users can read reviews other horror fans have uploaded and if they wish, they can join in the horror community by creating an account and adding their own reviews. 
+
+
 
 ## UX
 
@@ -46,6 +52,13 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 The main background image which I decided to use across all the pages was carefully chosen to provide a visually arresting image without distracting from the content on the page. It lends itself well to the overall color scheme of the site and allows the content to become the main focus around it. It was chosen to provide an other-worldly, ghost-like effect to convey the content of this site. 
 
 With the images in the reviews, allowing users to provide links to images with their reviews adds to the visual appeal and makes for a better user experience. I decided to make this an optional part of the add review section if users preferred not to have to search for images with their review. As a back-up I have included a simple image for each category, Book, Movie, TV Show that will load if no image url has been provided by the user. 
+
+#### Color scheme
+I used [coolors.co](https://coolors.co/) to generate a color scheme for the website. 
+Initially, I planned on using a 4th color but found overall, it worked better keeping it to the overall red, black and white scheme.
+
+![Color scheme](static/images/readme-images/color-scheme.pdf)
+
 
 #### Typefont
 
