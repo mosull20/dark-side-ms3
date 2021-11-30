@@ -86,7 +86,7 @@ Contact Page
     + attempted to send message form without the name field filled in, then with incorrect email format, and with message field left blank. The basic form validation functioned as expected to enusre form could not be submitted without the fields being filled in and provided feedback to the user indicating such. 
     + filled in all fields correctly and clicked send massage button to check that a message is displayed to the user indicating their message has been sent successfully. 
 
-**Further User Logged in functionality testing** 
+**Further functionality testing with a logged-in user** 
 
 
 
@@ -98,6 +98,9 @@ Contact Page
 ### User Stories Testing
 
 ### Bugs & Fixes
+
+* Had problems conecting to MongoDB initially. I double checked all syntax, created new user to access the database and still was unable to solve this problem. After creating a new account, new cluster, new database and user I was able to then get it all functioning properly. 
+
 * After adding a couple of reviews with the title name in lowercase, I found that the Sort by Title function returned the non-capitalized titles at the end, sorted only as compared to each other as opposed to being sorted together with the capitalized names. I first tried to use the .lower() method as I was sorting the results but this resulted in an error. The solutions I was finding after googling the issue seemed overly complicated but I did find out it is common of MongoDB to return sort requests in this way, and so I decided to try the .capitalize() method as the title name is being sent to Mongo Db instead. This very simple solution worked to solve this problem. Further to this, I then changed .capitalize() method to .title() after once more consulting google, as I wanted the movie or book titles to capitalize each word in the title rather than only the first.
 
 * In using the dropdown menu feature in the navbar from materialize, I found it would only target either the main navbar or the collapsible sidenav and not both at the same time. Found an assist to a solution [here](https://pretagteam.com/question/materialize-navbar-dropdownsidebar-dropdown-wont-work-together) which suggested using two copies of the same ul, one to target main navbar, one to target collapsible side navbar. 
@@ -113,5 +116,10 @@ Contact Page
 * Issue with some user uploaded links being broken so with guidance from CI tutor, found solution & function code for image verification on [Stack overflow](https://stackoverflow.com/questions/10543940/check-if-a-url-to-an-image-is-up-and-exists-in-python) and implented a generic back up image to load if link not working, or not a valid filetype or not provided. 
 
 * Note, I would like to in the future, outside the time restraints of the project, look at trying to refactor some of the code in app.py as the way I have the sort feature working currently seems repetitive. 
+
+Bugs not yet fixed
+* One feature I have on 'Add Review' form is to hide the 'Author' column if 'Movie' or 'TV Show' are selected in the category field as it is not relevant for those categories. I also added this to the 'Edit Review' form but found that when the page loads first, the author field shows regardless of what category is prefilled. Once you click into the category and reselect, it then is hidden (if not a book) and functions as expected. I tried various fixes for this before needing to move on with no satisfactory solution. Again, I will need to come back to this in the future and try again to find a solution. 
+
+
 
 

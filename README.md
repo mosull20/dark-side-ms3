@@ -215,6 +215,10 @@ Content for reviews added by myself was compiled by accessing various book and f
 
 * Code for error handling found at [flask.palletsprojects.com](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
 
+* Code to hide author column on add review page found on [Stack overflow](https://stackoverflow.com/questions/15566999/how-to-show-form-input-fields-based-on-select-value)
+
+* Code to remove `required` attribute from author name when hidden found on [Stack overflow](https://stackoverflow.com/questions/10407622/addattr-not-working-in-jquery)
+
 * Further code attribution related to specific issues are detailed in the Bugs and Fixes section of the TESTING.md file. 
 
 
