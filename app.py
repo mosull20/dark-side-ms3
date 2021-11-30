@@ -226,7 +226,7 @@ def add_review():
                 image_url = review_image
                 flash("Image verified")
             else:
-                image_url = "../static/images/Book-image.jpg"
+                image_url = "../static/images/new-zombie.jpg"
                 flash("Image not valid, will apply default image instead")
 
         review = {
@@ -261,7 +261,7 @@ def edit_review(review_id):
                 image_url = review_image
                 flash("Image verified")
             else:
-                image_url = "../static/images/Book-image.jpg"
+                image_url = "../static/images/new-zombie.jpg"
                 flash("Image not valid, will apply default image instead")
 
         updated_review = {

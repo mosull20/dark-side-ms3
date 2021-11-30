@@ -29,13 +29,7 @@
                 {% if review.image_url %}
                   <img class="activator category-image" src="{{ review.image_url }}" alt="{{ review.title_name }} image">
                 {% else %}
-                    {% if review.category_name == "Book" %}
-                      <img class="activator category-image" src="../static/images/Book-image.jpg">
-                    {% elif review.category_name == "Movie" %}
-                      <img class="activator category-image" src="../static/images/film-image.jpg">
-                    {% else %}
-                      <img class="activator category-image" src="../static/images/tv-image.jpg">
-                    {% endif %}
+                      <img class="activator category-image" src="../static/images/new-zombie.jpg" alt="zombie image"> 
                 {% endif %}
               </div>
           
