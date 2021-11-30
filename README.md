@@ -100,7 +100,7 @@ I used dbdiagram.io when designing the database schema that would best facilitat
     + Once registered or logged in successfully, the user will be redirected to their profile page. 
     + Once the contact form has been submitted, user will see a message letting them know their form has been successfully submitted, and will refresh the page with a blank form. 
 
-### Features left to implement
+### Features to implement in the future
 
 In the future, there are a number of features I would like to implement to provide more value to the user: 
 * Pagination would provide a better user experience as the amount of reviews increase. This would be the most important feature that I would add next outside of the project assessment timeline.
@@ -108,6 +108,7 @@ In the future, there are a number of features I would like to implement to provi
 * Ability for registered users to make a 'favourites' list, so they can save titles to this list to remind them what to watch or read next
 * Ability for registered users to add their own review to a title already in the database that another user has created, rather than having to create a full new title to review. 
 * Add an event category and expand the site to include events such as local horror movie screenings, conventions or any further community events that would be of interest to the horror fans and allow registered users to add events.
+* Note: I would add further validation to the contact form in the future (such as email.js) but as this was covered in my previous project, I chose to focus more on the data side of this project and ensure the CRUD functionality was my priority within the time constraints of the project.
 
 
 ## Technologies Used
@@ -204,24 +205,24 @@ To deploy to Heroku, the following steps were taken:
 
 ## Credits
 ### Content
-
+Content for reviews added by myself was compiled by accessing various book and film review websites for inspiration, particularly, [IMDB.com](https://www.imdb.com/), from which I used many film & tv synopses, [Goodreads](https://www.goodreads.com/), [Amazon](https://www.amazon.com/) and [Rottentomatoes.com](https://www.rottentomatoes.com/). Most of the image urls used for reviews are images from IMDB or Goodreads. 
 
 ### Code
 
+* Much of the initial code was written using the guidance and code in the 'Mini Project' module of the Backend Development section of the Code Institute course.
+
 * Jquery code to resolve issue with no validation on Materialize select element taken directly from Code Institute course work, 'Materialize Form Validation' from the Mini Project video content
-* In using the dropdown menu feature in the navbar from materialize, I found it would only target either the main navbar or the collapsible sidenav and not both at the same time. Found an assist to a solution [here](https://pretagteam.com/question/materialize-navbar-dropdownsidebar-dropdown-wont-work-together) which suggested using two copies of the same ul, one to target main navbar, one to target collapsible side navbar. 
-* Having issues using Materialize modal for confirming with user before deleting a review, issue was with targeting the correct review, solution to use the jinja templating value of the review id in the href and id found on slack (project-milestone-3 channel)
-* Solve to preserve image aspect ratio and resize images for user uploaded image urls found on stack overflow [here](https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio)
-* Found I had alot of repetition across 4 html files (book_reviews, movie_reviews, tvshow_reviews and reviews) so went back to look at refactoring this. Looked at the routing in app.py and I worked out a better solution of pulling the info from mongo db and returning those results on the one reviews.html page using different routes. However, I then stuggled with injecting the correct h2 header based on which route was chosen. I eventually found a solution to this on Stack Overflow [here](https://stackoverflow.com/questions/62853545/if-statement-to-determine-which-route-is-used-in-jinja-template-flask) which suggested using `request.endpoint` in the jinja `if` statement in reviews.html to execute an action (in this case displaying different headers). This worked perfectly and allowed me to delete 3 html files and control it all from one page using different routes. 
-    + Following on from this, I then wanted to see if there was a start point you could specify with this method also so that I could have the sort-by functionality return results based on what url the user is on when called this function as intitially, the sort-by functionality only returned results that sorted all reviews in all 3 categories. I wanted it to function so that if the user is only looking at movie reviews, then the sorting would return only movie reviews and not all categories reviews. I found the `request.path` solution [here](https://stackoverflow.com/questions/26276580/how-to-get-current-url-in-jinja2-flask-request-url-not-working) on Stack Overflow. 
-    + Then, one other issue to solve in tandem with the above was getting the correct h2 to show after the sort button was clicked on and I found the correct syntax to provide 2 checks in the jinja if statement once more on Stack Overflow [here](https://stackoverflow.com/questions/15168831/how-to-write-a-multiline-jinja-statement).
 
 * Code for error handling found at [flask.palletsprojects.com](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/)
-* Issue with some user uploaded links being broken so with guidance from CI tutor, found solution & function code for image verification on [Stack overflow](https://stackoverflow.com/questions/10543940/check-if-a-url-to-an-image-is-up-and-exists-in-python) and implented a generic back up image to load if link not working, or not a valid filetype or not provided. 
+
+* Further code attribution related to specific issues are detailed in the Bugs and Fixes section of the TESTING.md file. 
+
+
 ### Media
 #### Images
 * Favicon generated on [Favicon.io](https://favicon.io/favicon-converter/) using image from Pixabay - Image by <a href="https://pixabay.com/users/b0red-4473488/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">b0red</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5488416">Pixabay</a>
-* Main Background image in use across the site 
-
+* Main Background image in use across the site: Photo by <a href="https://unsplash.com/@stefanopollio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Stefano Pollio</a> on <a href="https://unsplash.com/@msull21/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+* Default image to load if no user image uploaded or not valid: Image by <a href="https://pixabay.com/users/thedigitalartist-202249/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2554660">Pete Linforth</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2554660">Pixabay</a>
   
 ### Acknowledgements
