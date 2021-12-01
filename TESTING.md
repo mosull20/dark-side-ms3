@@ -8,13 +8,13 @@ ___
 ## Contents
 * [Code Validation](#code-validation)
 * [Automated Testing](#automated-testing)
-    + [Lighthouse Testing](#lighthouse)
+    + [Lighthouse Testing](#lighthouse-testing)
 * [Manual Testing](#manual-testing)
     + [Functionality Testing](#functionality-testing)
     + [Responsiveness](#responsiveness)
     + [Cross Browser](#cross-browser)
 * [User Stories Testing](#user-stories-testing)
-* [Bugs and Fixes](#bugs-and-fixes)
+* [Bugs and Fixes](#bugs-&-fixes)
 ___
 
 ## Code Validation
@@ -69,7 +69,7 @@ After inital lighthouse testing, I implmented some recommendations to improve sc
 * Changed the input field label text to a darker shade on 'add review' form to improve accessibility as recommended. However, the accessbility score is still less than I would like as while lighthouse shows the select dropdown as not having a label for, I do have a label associated with this.
 * The performance score on mobile size for each of the review pages was disappointing low around the 72% mark. The amin cause of poor performance at this size was the user uploaded images being served simply as user entered urls. After looking into ways to improve on this, I would in the future look into using a better method of serving these images, eg. by using a package such as Imagemagick or a service such as Cloudinary. Further study on these is required outside the time contraints of the project.
 
-Lighthouse results:
+**Lighthouse results:**
 * Home page - desktop & mobile
 ![Home page](static/images/testing-images/home-lighthouse.png)
 
