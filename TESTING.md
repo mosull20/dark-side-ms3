@@ -4,6 +4,19 @@
 
 [Live website](https://the-dark-side.herokuapp.com/)
 
+___
+## Contents
+* [Code Validation](#code-validation)
+* [Automated Testing](#automated-testing)
+    + [Lighthouse Testing](#lighthouse)
+* [Manual Testing](#manual-testing)
+    + [Functionality Testing](#functionality-testing)
+    + [Responsiveness](#responsiveness)
+    + [Cross Browser](#cross-browser)
+* [User Stories Testing](#user-stories-testing)
+* [Bugs and Fixes](#bugs-and-fixes)
+___
+
 ## Code Validation
 
 1. **HTML validated on [W3C Markup Validation Service](https://validator.w3.org/)**
@@ -44,8 +57,9 @@ Checked using the 'Validate by Direct Input' method.
 
 ![Python valid](static/images/testing-images/python-valid.png)
 
+[Back to Contents](#contents)
 ***
-## Manual Testing
+## Automated Testing
 ___
 ### Lighthouse Testing
 
@@ -80,8 +94,10 @@ Lighthouse results:
 * Register - desktop & mobile
 ![Register page](static/images/testing-images/register-lighthouse.png)
 
-
-
+[Back to Contents](#contents)
+***
+## Manual Testing
+___
 ### Functionality Testing
 
 I used Google Chrome Dev Tools at all stage of this project to continuously check how each detail worked, particularly in ensuring responsiveness of each setion and feature as I worked on them. 
@@ -173,7 +189,8 @@ My Profile Page/Add New Review Page/Edit & Delete functions
 Admin additional functionality  
 * Logged in as admin to ensure that on the reviews page, all reviews on the site show the edit and delete buttons and these function correctly. Edited a review added under another username, changes saved and without overwriting the 'added-by' field so the review is still credited to the orginal user and thus will still show on their profile page when logged in, tested this to ensure works as expected. Ensured the delete button functions correctly so the admin can delete any user reviews that might be unsuitable. 
 
-
+[Back to Contents](#contents)
+___
 
 #### Responsiveness
 
@@ -187,6 +204,8 @@ The website was developed and tested primarily using the Chrome browser. I then 
 + Safari
 + Microsoft Edge
 
+[Back to Contents](#contents)
+___
 ### User Stories Testing
 
 * _As a user, I want to find a site that reviews books, movies and tv shows specifically in the horror genre._ 
@@ -217,7 +236,8 @@ The 'contact' option from the Navbar link as well as the 'Get in touch' link in 
 
 The social media links are in the footer across all pages of the website and link to the relevant social media network which will open in a new tab. 
 
-
+[Back to Contents](#contents)
+___
 ### Bugs & Fixes
 
 * Had problems conecting to MongoDB initially. I double checked all syntax, created new user to access the database and still was unable to solve this problem. After creating a new account, new cluster, new database and user I was able to then get it all functioning properly. 
@@ -244,6 +264,8 @@ The social media links are in the footer across all pages of the website and lin
 Bugs not yet fixed
 * One feature I have on 'Add Review' form is to hide the 'Author' column if 'Movie' or 'TV Show' are selected in the category field as it is not relevant for those categories. I also added this to the 'Edit Review' form but found that when the page loads first, the author field shows regardless of what category is prefilled. Once you click into the category and reselect, it then is hidden (if not a book) and functions as expected. I tried various fixes for this before needing to move on with no satisfactory solution. Again, I will need to come back to this in the future and try again to find a solution. 
 
+[Back to Contents](#contents)
+___
 
 
 
