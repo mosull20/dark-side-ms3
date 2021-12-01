@@ -8,7 +8,20 @@ View the live website [here](https://the-dark-side.herokuapp.com/).
 
 The Dark Side is a review site for all things horror related - books, movies and tv shows. Users can read reviews other horror fans have uploaded and if they wish, they can join in the horror community by creating an account and adding their own reviews. 
 
-
+## Contents
+* [UX](#UX)
+    + [Project Goals](#project-goals)
+    + [User Stories](#user-stories)
+    + [Wireframes](#wireframes)
+    + [Design](#design)
+* [Database](#database)
+* [Features](#features)
+    + [Existing Features](#existing-features)
+    + [Features to implement in the Future](#features-to-implement-in-the-future)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
 ## UX
 
@@ -39,6 +52,7 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 * [My Account page](wireframes/my-account-page.pdf)
 * [Add Review page](wireframes/add-review-page.pdf)
 * [Contact page](wireframes/contact-page.pdf)
+
 ### Design
 
 #### Overall Design
