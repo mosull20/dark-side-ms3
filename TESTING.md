@@ -14,7 +14,7 @@ ___
     + [Responsiveness](#responsiveness)
     + [Cross Browser](#cross-browser)
 * [User Stories Testing](#user-stories-testing)
-* [Bugs and Fixes](#bugs-&-fixes)
+* [Bugs and Fixes](#bugs-and-fixes)
 ___
 
 ## Code Validation
@@ -238,7 +238,7 @@ The social media links are in the footer across all pages of the website and lin
 
 [Back to Contents](#contents)
 ___
-### Bugs & Fixes
+### Bugs and Fixes
 
 * Had problems conecting to MongoDB initially. I double checked all syntax, created new user to access the database and still was unable to solve this problem. After creating a new account, new cluster, new database and user I was able to then get it all functioning properly. 
 
