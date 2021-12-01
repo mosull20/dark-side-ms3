@@ -6,7 +6,43 @@
 
 ## Code Validation
 
-1. HTML validated on [W3C Markup Validation Service](https://validator.w3.org/)
+1. **HTML validated on [W3C Markup Validation Service](https://validator.w3.org/)**
+Checked using the 'Validate By URI' as with the jinja templating the direct input method was unsuitable. 
+* All pages were checked and the same warning came up for each page as the code it referenced is contained in the base html page. 
+
+![HTML Warning](static/images/testing-images/html-heading-warning.png)
+
+* The warning refers to the flashed messages section. This does contain a `h4` heading within a div. I added in another h4 heading which then brought up a warning about an empty heading so I decided to revert to the original code. 
+
+* One further error was detected on both the 'add review' page and the 'edit review page'
+
+![HTML Warning](static/images/testing-images/html-label-error.png)
+
+* This was a typo error where I had the input id as 'title_name' but the label for was 'title-name'. I amended this on both documents, ran the page through the checker again and the error was resolved. 
+
+2. **CSS validated on [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)**
+Checked using the 'Validate by Direct Input' method.
+* Passed with no errors found, but 10 warnings were found. 
+
+![CSS Warning](static/images/testing-images/css-warnings.png)
+
+* These warnings relate to the vendor prefixes added by Autoprefixer along with one warning re the imported stylesheet, no action required. 
+
+3. **JavaScript validated on [JSHint](https://jshint.com/)**
+
+* Seven errors were found initially:
+
+![JS Warning](static/images/testing-images/jshint-warnings.png)
+
+* Five of these warnings were to do with semi-colons - I amended this in my file. I found a solution in Slack to eliminate the other warnings whcih was to click on the 'configure' button in JSHint and check 'New Javascript features (ES6)'. I also found on Slack checking the 'jquery' button under configure would ensure the checker will recognise JQuery and so no longer describe '$' as an undefined variable. I ran the code through once more after these adjustments and it passed with no errors or warnings. 
+
+![JS Warning](static/images/testing-images/jshint-nowarnings.png)
+
+4. **Python valdiated on [PEP8 online](http://pep8online.com/)
+
+* No errors found
+
+![Python valid](static/images/testing-images/python-valid.png)
 
 
 ## Manual Testing
