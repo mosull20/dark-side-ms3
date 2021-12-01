@@ -7,22 +7,16 @@ View the live website [here](https://the-dark-side.herokuapp.com/).
 ---
 
 The Dark Side is a review site for all things horror related - books, movies and tv shows. Users can read reviews other horror fans have uploaded and if they wish, they can join in the horror community by creating an account and adding their own reviews. 
-
+___
 ## Contents
 * [UX](#UX)
-    + [Project Goals](#project-goals)
-    + [User Stories](#user-stories)
-    + [Wireframes](#wireframes)
-    + [Design](#design)
 * [Database](#database)
 * [Features](#features)
-    + [Existing Features](#existing-features)
-    + [Features to implement in the Future](#features-to-implement-in-the-future)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
-
+___
 ## UX
 
 ### Project Goals
@@ -82,6 +76,8 @@ I chose the fonts based on the overall horror theme of the site. Nosifer was use
 The final design has differed from the wireframes based on what I felt worked better in terms of user experience as I was going through the process of building each page. Instead of one reviews page, I also opted to have seperate pages for each category so that on the home page, the user can chose to just look at book reviews, or just movie reviews etc., as well as the option to look at all the reviews on the site together. The layout of the reviews and way the content is displayed on each card is also something that I changed as the design in the wireframes did not work well with the content and the way I wanted to present the content to the user. I then matched the profile page to present the content in the same manner as the reviews page as anything else would be confusing to the user. I also added a modal to confirm if the user is sure they wish to delete a review. This was not specifically drawn up in the wireframes, but would always be a key feature that a user would expect before fully deleting any information they have previously created. 
 I also chose to replace the Genre field with Ratings as I felt sub genres within the horror domain would be too confusing and not provide value to the content. 
 
+[Back to Contents](#contents)
+___
 ## Database 
 
 I used MongoDB as the database for this project, as a non relational, document database, it gives more flexibility to this type of site. 
@@ -92,6 +88,8 @@ I used dbdiagram.io when designing the database schema that would best facilitat
 
 * A note from the above design, I decided against making use of a 'Genre' Field and instead added a 'Rating' which I felt provide more value to the website and a better UX.
 
+[Back to Contents](#contents)
+___
 ## Features
 ### Existing Features
 
@@ -140,7 +138,8 @@ In the future, there are a number of features I would like to implement to provi
 * As detailed under the Lighthouse testing in TESTING.md, a more efficient method of dealing with user uploaded images in terms of resizing and optimizing would be a benefit to improve ux on this site. I would like to add this in the future.
 * Note: I would add further validation to the contact form in the future (such as email.js) but as this was covered in my previous project, I chose to focus more on the data side of this project and ensure the CRUD functionality was my priority within the time constraints of the project.
 
-
+[Back to Contents](#contents)
+___
 ## Technologies Used
 #### Languages
 * [HTML](https://en.wikipedia.org/wiki/HTML)
@@ -171,10 +170,13 @@ In the future, there are a number of features I would like to implement to provi
 * [Website Mockup Generator](https://websitemockupgenerator.com/) used to generate responsive screenshot
 * [Autoprefixer.io](https://autoprefixer.github.io/) used to add vendor prefixes for the major browsers
 
-
+[Back to Contents](#contents)
+___
 ## Testing
 Testing is detailed in a seperate document, [here](TESTING.md).
 
+[Back to Contents](#contents)
+___
 ## Deployment
 
 This project was developed using the Gitpod IDE and pushed to a Github repository with the use of Git version control. The project was deployed using Heroku. 
@@ -235,6 +237,8 @@ To deploy to Heroku, the following steps were taken:
 9. Under "Manual Deploy", select "main" and click "Deploy Branch".
 10. Once the app has finished building, click on the "Open App" tab at the top right of the page. 
 
+[Back to Contents](#contents)
+___
 ## Credits
 ### Content
 Content for reviews added by myself was compiled by accessing various book and film review websites for inspiration, particularly, [IMDB.com](https://www.imdb.com/), from which I used many film & tv synopses, [Goodreads](https://www.goodreads.com/), [Amazon](https://www.amazon.com/) and [Rottentomatoes.com](https://www.rottentomatoes.com/). Most of the image urls used for reviews are images from IMDB or Goodreads. 
@@ -267,3 +271,5 @@ Content for reviews added by myself was compiled by accessing various book and f
 * Stack Overflow is another constant source of helpful guidance and answers to so many questions. 
 * My mentor, Nishant Kumar, has been so supportive and encouraging throughout this project with some great advice once again for MS3. 
 * The Tutor Support on Code Institute has also been very helpful during this project process. 
+
+[Back to Contents](#contents)
