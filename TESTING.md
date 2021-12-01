@@ -115,6 +115,35 @@ The website was developed and tested primarily using the Chrome browser. I then 
 
 ### User Stories Testing
 
+* _As a user, I want to find a site that reviews books, movies and tv shows specifically in the horror genre._ 
+
+The landing/home page of the website introduces the user to the aim of the site, withe the introductory paragraph clearly setting out that the website contains reviews of horror books, movies and tv shows for the horror fan in particular. 
+
+* _As a casual user, I want to be able to navigate the site easily and read reviews to help me decide what to watch or read next, I want access to this information without having to create an account, so I can then decide if I wish to engage and add reviews of my own._
+
+The website is simply and intuitively laid out so the user can very easily navigate throught the site and see the options. With links from the home page in the content area as well as a clear Nav bar with the various options to choose from. The casual user can browse through all the reviews and access that content with options to search for a particular title or sort reviews by title alphabetically or by best rated. They can they decide to create an account if they wish to upload their own reviews. 
+
+* _As a frequent user, I want to be able to create a profile so that I can add reviews of my own to share with other horror fans and users of this site._
+
+The register page is linked to from the home page, along with links in the Navbar, very clearly which brings the user to a standard registration form with a username and password field. Once they have registered, this will create their own profile page which will show any reviews they have uploaded previously. This page has a large button the user can click on to Add a new review. Once a user has registered, the links in the Navbar also adjust to provide different options so the user can easily navigate to the add review page and their profile page, or the Log out option. 
+
+* _As a user, I want to be able to search the database easily to find any specific reviews._ 
+
+The search bar displays at the top of each of the review pages and provides the user with info that it is a 'search by title' option with clear buttons to search or a reset button to go back to seeing all reviews. Further to that, the website has also provided the user with a 'sort-by' dropdown feature and allows the user to sort by title into alphabetical order or by ratings. 
+
+* _As a user, I want to be able to easily log in to my account so I can see what reviews I have added previously and be able to update or delete them._
+
+The Log In page is clearly navigable from the main home page with a link in the content paragraph as well as the Nav bar link which displays on every page. 
+
+* _As a user, I want to be able to contact the site with any queries I may have._
+
+The 'contact' option from the Navbar link as well as the 'Get in touch' link in the footer brings the user to the contact page where they can fill out the contact form and submit. 
+
+* _As a user, I want to follow this site on any social media they may have._
+
+The social media links are in the footer across all pages of the website and link to the relevant social media network which will open in a new tab. 
+
+
 ### Bugs & Fixes
 
 * Had problems conecting to MongoDB initially. I double checked all syntax, created new user to access the database and still was unable to solve this problem. After creating a new account, new cluster, new database and user I was able to then get it all functioning properly. 
