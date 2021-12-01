@@ -6,6 +6,9 @@
 
 ## Code Validation
 
+1. HTML validated on [W3C Markup Validation Service](https://validator.w3.org/)
+
+
 ## Manual Testing
 ### Lighthouse Testing
 ### Functionality Testing

@@ -78,6 +78,7 @@
     </header>
 
     <section>
+        <h4>
         <!-- flash messages from flask framework -->
         {% with messages = get_flashed_messages() %}
             {% if messages: %}
@@ -88,6 +89,7 @@
                 {% endfor%}
             {% endif %}
         {% endwith %}
+    </h4>
     </section>
 
     <main class="container">

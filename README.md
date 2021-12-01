@@ -154,6 +154,7 @@ In the future, there are a number of features I would like to implement to provi
 * [Randomkeygen.com](https://randomkeygen.com/) Secure password/secret key generator
 * [Favicon.io](https://favicon.io/favicon-converter/) Favicon generator
 * [Website Mockup Generator](https://websitemockupgenerator.com/) used to generate responsive screenshot
+* [Autoprefixer.io](https://autoprefixer.github.io/) used to add vendor prefixes for the major browsers
 
 
 ## Testing
