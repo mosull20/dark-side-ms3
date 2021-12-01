@@ -38,15 +38,23 @@ Checked using the 'Validate by Direct Input' method.
 
 ![JS Warning](static/images/testing-images/jshint-nowarnings.png)
 
-4. **Python valdiated on [PEP8 online](http://pep8online.com/)
+4. **Python valdiated on [PEP8 online](http://pep8online.com/)**
 
 * No errors found
 
 ![Python valid](static/images/testing-images/python-valid.png)
 
-
+***
 ## Manual Testing
+___
 ### Lighthouse Testing
+
+After inital lighthouse testing, I implmented some recommendations to improve scores - 
+* Added `rel="opener"` to improve security and performance when opening external links (added to social media links in footer).
+* Added a `title` attribute to improve accessibility for the social media links that display icons only.
+
+
+
 ### Functionality Testing
 
 I used Google Chrome Dev Tools at all stage of this project to continuously check how each detail worked, particularly in ensuring responsiveness of each setion and feature as I worked on them. 
