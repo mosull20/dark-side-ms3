@@ -53,7 +53,32 @@ After inital lighthouse testing, I implmented some recommendations to improve sc
 * Added `rel="opener"` to improve security and performance when opening external links (added to social media links in footer).
 * Added a `title` attribute to improve accessibility for the social media links that display icons only.
 * Changed the input field label text to a darker shade on 'add review' form to improve accessibility as recommended. However, the accessbility score is still less than I would like as while lighthouse shows the select dropdown as not having a label for, I do have a label associated with this.
+* The performance score on mobile size for each of the review pages was disappointing low around the 72% mark. The amin cause of poor performance at this size was the user uploaded images being served simply as user entered urls. After looking into ways to improve on this, I would in the future look into using a better method of serving these images, eg. by using a package such as Imagemagick or a service such as Cloudinary. Further study on these is required outside the time contraints of the project.
 
+Lighthouse results:
+* Home page - desktop & mobile
+![Home page](static/images/testing-images/home-lighthouse.png)
+
+* Add review page - desktop & mobile
+![Add review page](static/images/testing-images/add-review-lighthouse.png)
+
+* All reviews page - desktop & mobile
+![All reviews page](static/images/testing-images/allreviews-lighthouse.png)
+
+* Contact page - desktop & mobile
+![Contact page](static/images/testing-images/contact-lighthouse.png)
+
+* Edit review page - desktop & mobile
+![Edit review page](static/images/testing-images/edit-review-lighthouse.png)
+
+* Login page - desktop & mobile
+![Log In page](static/images/testing-images/login-lighthouse.png)
+
+* Profile page - desktop & mobile
+![Profile page](static/images/testing-images/profile-lighthouse.png)
+
+* Register - desktop & mobile
+![Register page](static/images/testing-images/register-lighthouse.png)
 
 
 

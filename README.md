@@ -123,6 +123,7 @@ In the future, there are a number of features I would like to implement to provi
 * Ability for registered users to delete their account. 
 * Add further admin capabilites such as being able to delete a user. 
 * Add an event category and expand the site to include events such as local horror movie screenings, conventions or any further community events that would be of interest to the horror fans and allow registered users to add events.
+* As detailed under the Lighthouse testing in TESTING.md, a more efficient method of dealing with user uploaded images in terms of resizing and optimizing would be a benefit to improve ux on this site. I would like to add this in the future.
 * Note: I would add further validation to the contact form in the future (such as email.js) but as this was covered in my previous project, I chose to focus more on the data side of this project and ensure the CRUD functionality was my priority within the time constraints of the project.
 
 
