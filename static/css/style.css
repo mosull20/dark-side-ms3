@@ -185,9 +185,9 @@ form {
 
 }
 .card-image {
-    height: 70%;
-
+    height: 65%;
 }
+
 /* code to resize image and keep aspect ratio for user uploaded image urls from stack overflow */
 /* https://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio */ 
 .category-image {

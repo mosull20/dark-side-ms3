@@ -25,7 +25,7 @@ mongo = PyMongo(app)
 def is_url_image(img_url):
     image_formats = ("image/png", "image/jpeg", "image/jpg")
     r = requests.head(img_url)
-    if r.headers["content-type"] in image_formats:
+    if r.headers.get("content-type", '') in image_formats:
         return True
     return False
 

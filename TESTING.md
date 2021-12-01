@@ -52,6 +52,8 @@ ___
 After inital lighthouse testing, I implmented some recommendations to improve scores - 
 * Added `rel="opener"` to improve security and performance when opening external links (added to social media links in footer).
 * Added a `title` attribute to improve accessibility for the social media links that display icons only.
+* Changed the input field label text to a darker shade on 'add review' form to improve accessibility as recommended. However, the accessbility score is still less than I would like as while lighthouse shows the select dropdown as not having a label for, I do have a label associated with this.
+
 
 
 
@@ -210,6 +212,7 @@ The social media links are in the footer across all pages of the website and lin
     + Then, one other issue to solve in tandem with the above was getting the correct h2 to show after the sort button was clicked on and I found the correct syntax to provide 2 checks in the jinja if statement once more on Stack Overflow [here](https://stackoverflow.com/questions/15168831/how-to-write-a-multiline-jinja-statement).
 
 * Issue with some user uploaded links being broken so with guidance from CI tutor, found solution & function code for image verification on [Stack overflow](https://stackoverflow.com/questions/10543940/check-if-a-url-to-an-image-is-up-and-exists-in-python) and implented a generic back up image to load if link not working, or not a valid filetype or not provided. 
+* During late stage testing, found some image url links that I tried to add returned a `keyerror` for content-type. I found a solution that worked for me on [Stack Overflow](https://stackoverflow.com/questions/37339644/content-type-is-blank-in-the-headers-of-some-requests), along with the following explanation - "Not all servers set a Content-Type header. Use .get() to retrieve a default if it is missing:".
 
 * Note, I would like to in the future, outside the time restraints of the project, look at trying to refactor some of the code in app.py as the way I have the sort feature working currently seems repetitive. 
 
