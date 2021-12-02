@@ -59,7 +59,7 @@ As a site owner, I want to provide a clear, easy to navigate, intuitive site tha
 
 The main background image which I decided to use across all the pages was carefully chosen to provide a visually arresting image without distracting from the content on the page. It lends itself well to the overall color scheme of the site and allows the content to become the main focus around it. It was chosen to provide an other-worldly, ghost-like effect to convey the content of this site. 
 
-With the images in the reviews, allowing users to provide links to images with their reviews adds to the visual appeal and makes for a better user experience. I decided to make this an optional part of the add review section if users preferred not to have to search for images with their review. As a back-up I have included a simple image for each category, Book, Movie, TV Show that will load if no image url has been provided by the user. 
+With the images in the reviews, allowing users to provide links to images with their reviews adds to the visual appeal and makes for a better user experience. I decided to make this an optional part of the add review section if users preferred not to have to search for images with their review. As a back-up I have included a simple image that will load if no image url has been provided by the user. 
 
 #### Color scheme
 I used [coolors.co](https://coolors.co/) to generate a color scheme for the website. 
@@ -106,7 +106,7 @@ ___
 * Reviews Pages
     + Four pages for the user to choose from, all with consistent styling. Book reviews page shows only reviews in the 'Book' category, Movies shows only Movie category reviews and TV Show reviews page only brings up the TV Show reviews. Or the user can see all the reviews on the website, all categories showing. 
     + Search Feature - On each page there is a search option at the top which clearly shows the user they can enter text to search through the website by Title name and shows any results matching the user's input, or display a message that no results were found. 
-    + Sort Feature - On each page, I have also provided the 'Sort By' option. This is in the form of a dropdown and provides the user with two options to choose from: Sort by Title in alphabeticla order, A-Z; or Sort by Rating (this is set-up to show the highest rated first, lowest rated last) and this is sorted based on the number of stars the user has given to the title they have reviewed. If no rating has been added, this is noted within the review and will display last in this sort feature. 
+    + Sort Feature - On each page, I have also provided the 'Sort By' option. This is in the form of a dropdown and provides the user with two options to choose from: Sort by Title in alphabetical order, A-Z; or Sort by Rating (this is set-up to show the highest rated first, lowest rated last) and this is sorted based on the number of stars the user has given to the title they have reviewed. If no rating has been added, this is noted within the review and will display last in this sort feature. 
     + Reviews are in card reveal format, they show the image associated with the review, the category and title name. The book category also shows the Author name. An arrow up icon is used to convey to the user they can click here for more information to be revealed. On clicking, the synopsis, review, rating and added by information is revealed. A click on the arrow down will close the card window again. 
 
 * Add Review Page   
@@ -153,7 +153,7 @@ ___
 * [GitHub](https://github.com/) Code hosting platform
 * [Gitpod](https://www.gitpod.io/) IDE used for writing and editing code, version control
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) Cloud platform
-* [MongoDB](https://www.mongodb.com/) Document Oreiented Database program
+* [MongoDB](https://www.mongodb.com/) Document Oriented Database program
 * [jQuery](https://jquery.com/) JavaScript Library
 * [Materialize CSS](https://materializecss.com/) Front end Framework
 * [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) Extension to bridge Flask with MongoDB

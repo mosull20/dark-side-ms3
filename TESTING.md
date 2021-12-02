@@ -47,7 +47,7 @@ Checked using the 'Validate by Direct Input' method.
 
 ![JS Warning](static/images/testing-images/jshint-warnings.png)
 
-* Five of these warnings were to do with semi-colons - I amended this in my file. I found a solution in Slack to eliminate the other warnings whcih was to click on the 'configure' button in JSHint and check 'New Javascript features (ES6)'. I also found on Slack checking the 'jquery' button under configure would ensure the checker will recognise JQuery and so no longer describe '$' as an undefined variable. I ran the code through once more after these adjustments and it passed with no errors or warnings. 
+* Five of these warnings were to do with semi-colons - I amended this in my file. I found a solution in Slack to eliminate the other warnings which was to click on the 'configure' button in JSHint and check 'New Javascript features (ES6)'. I also found on Slack checking the 'jquery' button under configure would ensure the checker will recognise JQuery and so no longer describe '$' as an undefined variable. I ran the code through once more after these adjustments and it passed with no errors or warnings. 
 
 ![JS Warning](static/images/testing-images/jshint-nowarnings.png)
 
@@ -63,11 +63,11 @@ Checked using the 'Validate by Direct Input' method.
 ___
 ### Lighthouse Testing
 
-After inital lighthouse testing, I implmented some recommendations to improve scores - 
+After inital lighthouse testing, I implemented some recommendations to improve scores - 
 * Added `rel="opener"` to improve security and performance when opening external links (added to social media links in footer).
 * Added a `title` attribute to improve accessibility for the social media links that display icons only.
 * Changed the input field label text to a darker shade on 'add review' form to improve accessibility as recommended. However, the accessbility score is still less than I would like as while lighthouse shows the select dropdown as not having a label for, I do have a label associated with this.
-* The performance score on mobile size for each of the review pages was disappointing low around the 72% mark. The amin cause of poor performance at this size was the user uploaded images being served simply as user entered urls. After looking into ways to improve on this, I would in the future look into using a better method of serving these images, eg. by using a package such as Imagemagick or a service such as Cloudinary. Further study on these is required outside the time contraints of the project.
+* The performance score on mobile size for each of the review pages was disappointing low around the 72% mark. The main cause of poor performance at this size was the user uploaded images being served simply as user entered urls. After looking into ways to improve on this, I would in the future look into using a better method of serving these images, eg. by using a package such as Imagemagick or a service such as Cloudinary. Further study on these is required outside the time contraints of the project.
 
 **Lighthouse results:**
 * Home page - desktop & mobile
@@ -138,7 +138,7 @@ Home Page as a logged in user
 Books Review Page
 * All of the above steps for the Navbar and Footer links were repeated to ensure all worked as expected from this page. 
 * Steps repeated as a non logged in user as well as a logged in user.
-    + click on each card display to ensure card is funtioning as expected and content can be revealed on clicking up arrow and hidden on clicking down arrow
+    + click on each card display to ensure card is functioning as expected and content can be revealed on clicking up arrow and hidden on clicking down arrow
     + Search bar:
         1. attempt to click search button with nothing entered in search field to ensure validation works
         2. enter a word known to not provide a match to test what is returned in a no results scenario  - 'No results found' flash message displays and 'Sort-by' bar is hidden as designed. 
@@ -152,29 +152,29 @@ Books Review Page
 Movies Review Page/TV Shows Review Page/All Reviews page
 
 * All the above steps for the book reviews page were repeated for each of the remaining review pages which all performed as expected. 
-* Sort-by feature on each page returns only results from that category ie. on Movies page, sorting only deals with Movie reviews. This functioned as designed. On the reviews page, the sort-by returns all the results as expected. 
+* Sort-by feature on each page returns only results from that category ie. on Movies page, sorting only deals with Movie reviews. This functions as designed. On the reviews page, the sort-by returns all the results as expected. 
 
 Register page
 * All of the above steps for the Navbar and Footer links were repeated to ensure all worked as expected from this page. 
 * Further steps taken:
-    + tested username field valdiation by entering no characters, less characters than advised, special characters and tried registering, form validation functioned as expected and provides the user with feedback if not filled correctly
+    + tested username field validation by entering no characters, less characters than advised, special characters and tried registering, form validation functioned as expected and provides the user with feedback if not filled correctly
     + repeated these steps in the password field, all functions as expected. 
     + tested with entering a username known to already exist to ensure a duplicate is not accepted and a messsage is returned to user that that username already exists. 
     + tested link to log in page if user is already registered.
     + tested with creating a new user to ensure register form functions correctly and user is brought to their profile page and a success message is displayed to user, and nav links change to display correct options for a registered user
 
 Log In Page
-* Repeated all of the above steps with regard to checkin validation on username and password fields 
+* Repeated all of the above steps with regard to checking validation on username and password fields 
 * Further steps taken:
     + attempted to log in with a username known to not be registered already, attempted to log in with an incorrect password for an already registered account - both steps resulted in log in failing, message being displayed to user that an incorrect username and or password was used and reloading the log in form to allow user make another attempt. 
     + logged in as registered user to ensure log in accepted as expected and user brought to their profile page
     + clicked on register link to ensure user is redirected to the register page if they have not yet done so.
 
 Contact Page
-* Repeated the above steps for all the navbar and footer links and functioning.
+* Repeated the above steps for all the navbar and footer links and all are functioning.
 * Further steps taken:
-    + attempted to send message form without the name field filled in, then with incorrect email format, and with message field left blank. The basic form validation functioned as expected to enusre form could not be submitted without the fields being filled in and provided feedback to the user indicating such. 
-    + filled in all fields correctly and clicked send massage button to check that a message is displayed to the user indicating their message has been sent successfully. 
+    + attempted to send message form without the name field filled in, then with incorrect email format, and with message field left blank. The basic form validation functioned as expected to ensure form could not be submitted without the fields being filled in and provided feedback to the user indicating such. 
+    + filled in all fields correctly and clicked send message button to check that a message is displayed to the user indicating their message has been sent successfully. 
 
 **Further functionality testing with a logged-in user** 
 
