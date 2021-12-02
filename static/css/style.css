@@ -178,6 +178,11 @@ form {
     color: #a52612;
 }
 
+.category-icon {
+    font-size: 40px;
+    color: #a52612;
+}
+
 /* --- reviews page --- */
 
 .card {
@@ -236,7 +241,8 @@ form {
 /* Screens under 575px */
 @media screen and (max-width: 575px) {
     nav .brand-logo {
-        font-size: 1.1rem;
+        font-size: 15px;
+        left: 35%;
     }
     footer {
         height: auto;
